@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
+/* YZY WHEELS — premium dark automotive theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --yz-bg: #050508;
+  --yz-bg-elevated: #0c0c12;
+  --yz-surface: #12121a;
+  --yz-border: rgba(255, 255, 255, 0.08);
+  --yz-text: #f4f4f5;
+  --yz-muted: #a1a1aa;
+  --yz-accent: #facc15;
+  --yz-accent-dim: #ca8a04;
+  --yz-glow: rgba(250, 204, 21, 0.35);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-yz-bg: var(--yz-bg);
+  --color-yz-elevated: var(--yz-bg-elevated);
+  --color-yz-surface: var(--yz-surface);
+  --color-yz-border: var(--yz-border);
+  --color-yz-text: var(--yz-text);
+  --color-yz-muted: var(--yz-muted);
+  --color-yz-accent: var(--yz-accent);
+  --color-yz-accent-dim: var(--yz-accent-dim);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-bebas);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--yz-bg);
+  color: var(--yz-text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+/* Display: Bebas for Latin glyphs; Cyrillic falls through to Manrope automatically */
+.yz-display {
+  font-family: var(--font-bebas), var(--font-manrope), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+::selection {
+  background: var(--yz-accent);
+  color: #050508;
+}
+
+/* Subtle grid texture overlay */
+.yz-grid-bg {
+  background-image:
+    linear-gradient(rgba(250, 204, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 204, 21, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.yz-glow-text {
+  text-shadow: 0 0 40px var(--yz-glow), 0 0 80px rgba(250, 204, 21, 0.15);
+}
+
+.yz-card-glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(250, 204, 21, 0.15),
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 60px -15px var(--yz-glow);
+}
+
+/* Focus rings — accessibility */
+:focus-visible {
+  outline: 2px solid var(--yz-accent);
+  outline-offset: 2px;
 }

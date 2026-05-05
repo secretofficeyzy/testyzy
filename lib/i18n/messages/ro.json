@@ -1,0 +1,265 @@
+{
+  "common": {
+    "siteTagline": "Jante făcute să arate bine în viața reală, nu doar în poze.",
+    "ctaQuote": "Cere ofertă",
+    "viewServices": "Vezi serviciile",
+    "allServices": "Toate serviciile",
+    "details": "Detalii",
+    "skipToContent": "Sari la conținut",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "mainNav": "Principal",
+    "mobileNav": "Navigare mobilă",
+    "carouselPrev": "Anterior",
+    "carouselNext": "Următor",
+    "slide": "Slide {n}",
+    "loading": "Se încarcă…",
+    "sending": "Se trimite…"
+  },
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "about": "Despre",
+    "contact": "Contact"
+  },
+  "meta": {
+    "home": {
+      "title": "Acasă",
+      "description": "YZY WHEELS — vopsire și restaurare jante, etriere, vulcanizare. Atelier auto dedicat: ofertă clară, execuție atentă."
+    },
+    "services": {
+      "title": "Servicii",
+      "description": "Vopsire jante, restaurare cu tăiere la diamant, etriere, consultanță, vulcanizare și îndreptare roți — YZY WHEELS."
+    },
+    "about": {
+      "title": "Despre noi",
+      "description": "Povestea YZY WHEELS — cum lucrăm, ce urmărim și de ce am ales să rămânem dedicați roților."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Sună sau scrie — îți spunem clar dacă putem prelua proiectul și în ce timp."
+    },
+    "quote": {
+      "title": "Cere ofertă",
+      "description": "Formular pentru ofertă YZY WHEELS — tip jantă, dimensiune, serviciu, poze."
+    }
+  },
+  "hero": {
+    "eyebrow": "Atelier jante & anvelope",
+    "line1": "YZY WHEELS",
+    "line2": "Nu refacem jante. Le readucem la viață.",
+    "lead": "Jantele nu sunt doar un detaliu. Sunt prima impresie, iar noi le aducem înapoi la nivelul pe care îl merită.",
+    "ctaPrimary": "Contactează-ne",
+    "ctaSecondary": "Ce facem concret"
+  },
+  "servicesPreview": {
+    "eyebrow": "Ce facem zilnic?",
+    "title": "Servicii de atelier, nu „pachete”",
+    "subtitle": "Fie punct e tăietură la diamant, fie vopsea pe etrier — livrăm cu aceeași meticulozitate: pregătire serioasă, strat aplicat corect, verificare finală."
+  },
+  "servicesList": {
+    "vopsire_jante": {
+      "title": "Vopsire jante",
+      "short": "Șlef, grund, strat cromatic — stratificări făcute cum trebuie.",
+      "description": "Nu e „quick spray”. Pregătim suprafața până când e curată, aplicăm materiale compatibile cu tipul jantei și verificăm uniformitatea la lumină laterală. Culori OEM, nuanțe custom sau finisaje care stau la drum.",
+      "imageAlt": "Jantă în proces de vopsire profesională"
+    },
+    "restaurare_jante": {
+      "title": "Restaurare jante",
+      "short": "Sudură fină, rectificare, tăiere la diamant când e cazul.",
+      "description": "Crăpături, ciobituri, coroziune la buză sau interior — întâi structură, apoi estetic. Undă potrivită, eventual tăiere la diamant pentru fața jantei și re-vopsire în strat compatibil cu finisajul dorit.",
+      "imageAlt": "Restaurare detaliu jantă, față prelucrată"
+    },
+    "vopsire_etriere": {
+      "title": "Vopsire etriere",
+      "short": "Demontaj corect, mascare, rezistență la căldură.",
+      "description": "Nu lăsăm etrierul „în treacăt”. Curățăm, pregătim, vopsim cu produse gândite pentru temperaturi ridicate — galben, roșu sau nuanță discretă, după ce vrei să iasă în evidență.",
+      "imageAlt": "Etriere vopsite și detaliu finisaj"
+    },
+    "consultanta_montaj": {
+      "title": "Consultanță & montaj",
+      "short": "ET, lățimi, clearance — ca să nu regreți după prima groapă.",
+      "description": "Te ajutăm să alegi combinația care îți place și încape fără șters interior sau ARK dubios. Montaj echilibrat, cu moment la cheie acolo unde e nevoie.",
+      "imageAlt": "Montaj roți și consultanță în atelier"
+    },
+    "vulcanizare_indreptare": {
+      "title": "Vulcanizare + îndreptare roți",
+      "short": "Balonări fine, devieri — diagnosticate și remediate corect.",
+      "description": "Anvelopă care „bate” sau jantă cu săritură mică — verificăm unde e problema și reparăm acolo unde e eficient: vulcanizare de calitate sau îndreptare controlată, fără improvizații care costă mai mult după.",
+      "imageAlt": "Vulcanizare și verificare roată la stand"
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "Lista completă",
+    "title": "Servicii",
+    "subtitle": "Nimic abstract — doar ce putem executa în atelier, cu scule și materiale pe care le cunoaștem.",
+    "ctaPerService": "Contactează-ne pentru acest serviciu"
+  },
+  "beforeAfter": {
+    "eyebrow": "Transformare",
+    "title": "Înainte & după",
+    "subtitle": "Trage separatorul — una aceeași piesă: uzură, apoi finisaj refăcut omogen.",
+    "before": "Înainte",
+    "after": "După",
+    "hint": "Click pe imagine, apoi ← / → de la tastatură, sau trage cu mouse-ul.",
+    "disclaimer": "Ilustrație demonstrativă — înlocuiește cu lucrările tale când ai material foto."
+  },
+  "testimonials": {
+    "eyebrow": "Clienți",
+    "title": "Ce spun după ce au plecat cu mașina",
+    "subtitle": "Feedback din proiecte reale — nume scurtate, mașina e a lor, nu a noastră.",
+    "items": {
+      "a": {
+        "quote": "Mi-au refăcut setul de vară când eram convins că e doar „încă un pic uzat”. Comunicare simplă, fără povești.",
+        "author": "Andrei M.",
+        "role": "BMW M3"
+      },
+      "b": {
+        "quote": "Groapă, jantă șifonată — aveam emoții. Au recuperat fără să forțeze. Se simte pe drum că e dreaptă.",
+        "author": "Roxana T.",
+        "role": "Audi A4"
+      },
+      "c": {
+        "quote": "Am vrut galben pe negru, fără aspect vopsit la spray. S-a văzut diferența când am strâns luminile în parcare.",
+        "author": "Mihai D.",
+        "role": "VW Golf"
+      }
+    }
+  },
+  "ctaBanner": {
+    "title": "Ai deja poze cu setul sau o problemă clară?",
+    "description": "Trimite dimensiuni și imagini — primești răspuns clar, fără termeni complicați.",
+    "primary": "Contact",
+    "secondary": "Contact"
+  },
+  "footer": {
+    "tagline": "Atelier pentru jante și roți — vopsire, restaurare, montaj. Cu oameni care îți spun direct dacă se merită.",
+    "links": "Link-uri",
+    "contact": "Contact",
+    "social": "Social",
+    "quoteLink": "Cere ofertă",
+    "rights": "Toate drepturile rezervate.",
+    "madeIn": "Lucrat pentru condiții reale pe șosea."
+  },
+  "aboutPage": {
+    "eyebrow": "Brand",
+    "title": "YZY WHEELS",
+    "intro": "Am pornit din nevoia unui finisaj care să reziste și în sezonul cu praf și denivelări. Nu vindem „look de poze” — ne uităm la jantă la lumină rece, o simțim pe echilibror, o vedem pe mașină.",
+    "body1": "Lucrăm cu oameni care își cunosc mașina și cu unii care vor doar „să arate mai bine” — în ambele cazuri începem de la ce e real: uzură, geometrie, buget.",
+    "body2": "Echipamentele sunt alese ca să repetăm aceeași calitate: cabine de vopsire, consumabile serioase, flux separat între murdărie și strat fin.",
+    "valuesEyebrow": "Ce nu negociem",
+    "valuesTitle": "Pe scurt",
+    "valuesSubtitle": "Fără slide-uri de marketing — trei lucruri după care ne ghidăm zilnic.",
+    "values": {
+      "precision": {
+        "title": "Precizie",
+        "text": "Toleranțe stricte și verificări înainte să dăm OK final — când nu iese, refacem pasul, nu ascundem."
+      },
+      "safety": {
+        "title": "Siguranță",
+        "text": "Structura înainte de orice strat strălucitor. Dacă nu e sigur pe drum, îți spunem drept."
+      },
+      "honesty": {
+        "title": "Onestitate",
+        "text": "Dacă o reparație e doar cosmetică sau doar temporară, o lași scris pe masă înainte să plătești."
+      }
+    },
+    "spaceTitle": "Spațiu gândit pentru treabă curată",
+    "spaceText": "Zone separate pentru pregătire, finisaj și control — mai puțin amestec, mai puține surprize la livrare.",
+    "heroImageAlt": "Interior atelier, bancuri și echipamente",
+    "detailImageAlt": "Detaliu estetic roată sport"
+  },
+  "contactPage": {
+    "eyebrow": "Legătură",
+    "title": "Contact",
+    "subtitle": "Sună dacă e urgent sau scrie când ai detalii și poze. Îți răspundem cu ce putem face, nu cu „revin mâine” fără sens.",
+    "company": "Date firmă",
+    "formTitle": "Trimite un mesaj",
+    "formHint": "Validare automată — nu trimite date de plată în formular.",
+    "mapNote": "Hartă demonstrativă — înlocuiește cu adresa ta reală.",
+    "mapTitle": "Locație pe hartă"
+  },
+  "quotePage": {
+    "eyebrow": "Ofertă personalizată",
+    "title": "Cere ofertă",
+    "subtitle": "Completează cât poți — ne ajută să evităm mesaje în gol. În producție, formularul poate fi legat de email sau CRM."
+  },
+  "forms": {
+    "contact": {
+      "name": "Nume",
+      "email": "Email",
+      "phone": "Telefon",
+      "message": "Mesaj",
+      "sending": "Se trimite…",
+      "submit": "Trimite mesajul",
+      "success": "Mesaj trimis. Te contactăm în curând.",
+      "errorGeneric": "Eroare la trimitere.",
+      "errorNetwork": "Rețea indisponibilă. Încearcă din nou.",
+      "validation": {
+        "name": "Introdu numele",
+        "email": "Email invalid",
+        "phone": "Număr de telefon invalid",
+        "message": "Scrie un mesaj (min. 10 caractere)"
+      }
+    },
+    "quote": {
+      "legendWheels": "Despre roți",
+      "legendContact": "Date contact",
+      "wheelType": "Tip jantă",
+      "wheelSize": "Dimensiune",
+      "service": "Serviciu dorit",
+      "details": "Detalii suplimentare (opțional)",
+      "photos": "Poze jante (opțional, max. 8MB/fișier)",
+      "photosHint": "Click sau trage fișiere aici. JPG, PNG sau WebP.",
+      "name": "Nume complet",
+      "email": "Email",
+      "phone": "Telefon",
+      "submit": "Trimite cererea de ofertă",
+      "sending": "Se trimite cererea…",
+      "success": "Cererea a fost înregistrată. Te contactăm în curând.",
+      "errorGeneric": "Eroare la trimitere.",
+      "errorNetwork": "Rețea indisponibilă. Încearcă din nou.",
+      "optionPlaceholder": "Selectează…",
+      "wheelTypes": {
+        "otel": "Oțel",
+        "aluminiu": "Aluminiu",
+        "forjate": "Forjate / multipiese",
+        "altele": "Altele"
+      },
+      "sizes": {
+        "15": "15\"",
+        "16": "16\"",
+        "17": "17\"",
+        "18": "18\"",
+        "19": "19\"",
+        "20": "20\"",
+        "21": "21\"+"
+      },
+      "services": {
+        "vopsire_jante": "Vopsire jante",
+        "restaurare_jante": "Restaurare jante (incl. tăiere la diamant)",
+        "vopsire_etriere": "Vopsire etriere",
+        "consultanta_montaj": "Consultanță & montaj",
+        "vulcanizare_indreptare": "Vulcanizare + îndreptare roți"
+      },
+      "validation": {
+        "wheelType": "Alege tipul jantei",
+        "wheelSize": "Alege dimensiunea",
+        "service": "Alege serviciul",
+        "name": "Numele este obligatoriu",
+        "email": "Email invalid",
+        "phone": "Telefon invalid",
+        "fileSize": "Fișierul „{name}” depășește 8MB.",
+        "fileType": "Tip neacceptat pentru „{name}”."
+      }
+    }
+  },
+  "logo": {
+    "home": "YZY WHEELS — Acasă"
+  },
+  "localeSwitcher": {
+    "label": "Limbă",
+    "ro": "RO",
+    "ru": "RU"
+  }
+}
