@@ -37,10 +37,10 @@ export const socialLinks = [
  * comparație înainte/după în `components/sections/BeforeAfterSection.tsx` (constante BEFORE/AFTER).
  */
 export const images = {
-  hero: "https://images.unsplash.com/photo-1716919702381-6113650602c2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  hero: "https://images.unsplash.com/photo-1748569747574-7f15827f6c0d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   workshop: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80",
-  wheelClose: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-  repair: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
+  wheelClose: "https://images.unsplash.com/photo-1708869327956-7416dfc27712?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  repair: "https://images.unsplash.com/photo-1672619438903-694a7dc3c8a6?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   tireBay: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&q=80",
   caliper: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900&q=80",
   mount: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=900&q=80",

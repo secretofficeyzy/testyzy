@@ -53,52 +53,52 @@
     "ctaSecondary": "Ce facem concret"
   },
   "servicesPreview": {
-    "eyebrow": "Ce facem zilnic?",
-    "title": "Servicii de atelier, nu „pachete”",
-    "subtitle": "Fie punct e tăietură la diamant, fie vopsea pe etrier — livrăm cu aceeași meticulozitate: pregătire serioasă, strat aplicat corect, verificare finală."
+    "eyebrow": "Ce facem zi de zi?",
+    "title": "În atelier",
+    "subtitle": "În fiecare zi trec pe la noi jante zgâriate, lovite sau pur și simplu uzate. Unele au nevoie de o revopsire, altele de restaurare completă. Le luăm pe rând, le pregătim corect și nu le dăm din atelier până nu arată cum trebuie."
   },
   "servicesList": {
     "vopsire_jante": {
       "title": "Vopsire jante",
-      "short": "Șlef, grund, strat cromatic — stratificări făcute cum trebuie.",
-      "description": "Nu e „quick spray”. Pregătim suprafața până când e curată, aplicăm materiale compatibile cu tipul jantei și verificăm uniformitatea la lumină laterală. Culori OEM, nuanțe custom sau finisaje care stau la drum.",
+      "short": "Curățăm, pregătim și vopsim corect, fără grabă. Finisajul trebuie să iasă uniform și să reziste, nu doar să arate bine în poze.",
+      "description": "Nu dăm doar un strat nou de vopsea. Janta este curățată, pregătită și verificată înainte de finisaj. Scopul e simplu: să arate bine și după timp, nu doar când pleacă din atelier.",
       "imageAlt": "Jantă în proces de vopsire profesională"
     },
     "restaurare_jante": {
       "title": "Restaurare jante",
-      "short": "Sudură fină, rectificare, tăiere la diamant când e cazul.",
-      "description": "Crăpături, ciobituri, coroziune la buză sau interior — întâi structură, apoi estetic. Undă potrivită, eventual tăiere la diamant pentru fața jantei și re-vopsire în strat compatibil cu finisajul dorit.",
+      "short": "Zgârieturi, lovituri sau uzură — le rezolvăm pas cu pas. Dacă e nevoie, refacem și finisajul diamantat, cu atenție la detalii.",
+      "description": "Zgârieturi, lovituri sau uzură — fiecare set vine cu problema lui. Corectăm ce trebuie, refacem suprafața și aducem janta cât mai aproape de starea ei originală. Dacă este nevoie, facem și tăiere la diamant pentru finisajul final",
       "imageAlt": "Restaurare detaliu jantă, față prelucrată"
     },
     "vopsire_etriere": {
       "title": "Vopsire etriere",
-      "short": "Demontaj corect, mascare, rezistență la căldură.",
-      "description": "Nu lăsăm etrierul „în treacăt”. Curățăm, pregătim, vopsim cu produse gândite pentru temperaturi ridicate — galben, roșu sau nuanță discretă, după ce vrei să iasă în evidență.",
+      "short": "Un detaliu mic care schimbă mult aspectul. Le vopsim curat, în culori care se potrivesc mașinii.",
+      "description": "Vopsirea etrierelor schimbă mult aspectul mașinii atunci când este făcută corect. Curățăm, pregătim și aplicăm vopseaua atent, folosind materiale rezistente la temperaturi ridicate și utilizare zilnică.",
       "imageAlt": "Etriere vopsite și detaliu finisaj"
     },
     "consultanta_montaj": {
       "title": "Consultanță & montaj",
-      "short": "ET, lățimi, clearance — ca să nu regreți după prima groapă.",
-      "description": "Te ajutăm să alegi combinația care îți place și încape fără șters interior sau ARK dubios. Montaj echilibrat, cu moment la cheie acolo unde e nevoie.",
+      "short": "Dacă nu ești sigur ce alegere e bună, te ajutăm. Îți spunem direct ce merge și ce nu.",
+      "description": "Te ajutăm să alegi combinația potrivită pentru mașina ta, fără complicații și fără să îți vindem ceva inutil. Montajul este făcut atent, cu verificări și echilibrare corectă.",
       "imageAlt": "Montaj roți și consultanță în atelier"
     },
     "vulcanizare_indreptare": {
       "title": "Vulcanizare + îndreptare roți",
       "short": "Balonări fine, devieri — diagnosticate și remediate corect.",
-      "description": "Anvelopă care „bate” sau jantă cu săritură mică — verificăm unde e problema și reparăm acolo unde e eficient: vulcanizare de calitate sau îndreptare controlată, fără improvizații care costă mai mult după.",
+      "description": "Verificăm atent fiecare roată și identificăm problema înainte de orice intervenție. Îndreptăm jantele atunci când se poate face corect și sigur, fără improvizații sau soluții rapide.",
       "imageAlt": "Vulcanizare și verificare roată la stand"
     }
   },
   "servicesPage": {
     "eyebrow": "Lista completă",
     "title": "Servicii",
-    "subtitle": "Nimic abstract — doar ce putem executa în atelier, cu scule și materiale pe care le cunoaștem.",
+    "subtitle": "Doar lucruri pe care le facem zilnic în atelier. Fără promisiuni inutile.",
     "ctaPerService": "Contactează-ne pentru acest serviciu"
   },
   "beforeAfter": {
     "eyebrow": "Transformare",
-    "title": "Înainte & după",
-    "subtitle": "Trage separatorul — una aceeași piesă: uzură, apoi finisaj refăcut omogen.",
+    "title": "Before & After",
+    "subtitle": "Nu e editare. E aceeași jantă, înainte și după.",
     "before": "Înainte",
     "after": "După",
     "hint": "Click pe imagine, apoi ← / → de la tastatură, sau trage cu mouse-ul.",
@@ -147,21 +147,21 @@
     "intro": "Am pornit din nevoia unui finisaj care să reziste și în sezonul cu praf și denivelări. Nu vindem „look de poze” — ne uităm la jantă la lumină rece, o simțim pe echilibror, o vedem pe mașină.",
     "body1": "Lucrăm cu oameni care își cunosc mașina și cu unii care vor doar „să arate mai bine” — în ambele cazuri începem de la ce e real: uzură, geometrie, buget.",
     "body2": "Echipamentele sunt alese ca să repetăm aceeași calitate: cabine de vopsire, consumabile serioase, flux separat între murdărie și strat fin.",
-    "valuesEyebrow": "Ce nu negociem",
+    "valuesEyebrow": "Ce contează pentru noi",
     "valuesTitle": "Pe scurt",
-    "valuesSubtitle": "Fără slide-uri de marketing — trei lucruri după care ne ghidăm zilnic.",
+    "valuesSubtitle": "unt câteva lucruri la care nu facem compromis, indiferent de lucrare.",
     "values": {
       "precision": {
         "title": "Precizie",
-        "text": "Toleranțe stricte și verificări înainte să dăm OK final — când nu iese, refacem pasul, nu ascundem."
+        "text": "Verificăm tot înainte ca setul să plece din atelier. Dacă ceva nu iese cum trebuie, refacem — nu lăsăm „merge și așa”."
       },
       "safety": {
         "title": "Siguranță",
-        "text": "Structura înainte de orice strat strălucitor. Dacă nu e sigur pe drum, îți spunem drept."
+        "text": "Aspectul contează, dar nu mai mult decât siguranța pe drum. Dacă o jantă nu merită făcută doar pentru estetică, spunem direct."
       },
       "honesty": {
         "title": "Onestitate",
-        "text": "Dacă o reparație e doar cosmetică sau doar temporară, o lași scris pe masă înainte să plătești."
+        "text": "Îți explicăm de la început ce se poate face și ce nu. Preferăm o discuție sinceră decât promisiuni doar ca să iasă lucrarea."
       }
     },
     "spaceTitle": "Spațiu gândit pentru treabă curată",
@@ -172,8 +172,8 @@
   "contactPage": {
     "eyebrow": "Legătură",
     "title": "Contact",
-    "subtitle": "Sună dacă e urgent sau scrie când ai detalii și poze. Îți răspundem cu ce putem face, nu cu „revin mâine” fără sens.",
-    "company": "Date firmă",
+    "subtitle": "Sună-ne sau trimite câteva poze cu jantele. Vedem despre ce este vorba și îți răspundem cât mai direct posibil.",
+    "company": "Date contact",
     "formTitle": "Trimite un mesaj",
     "formHint": "Validare automată — nu trimite date de plată în formular.",
     "mapNote": "Hartă demonstrativă — înlocuiește cu adresa ta reală.",
