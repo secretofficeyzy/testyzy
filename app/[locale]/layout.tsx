@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import type { LocalePageParams } from "@/lib/i18n/page-params";
 import { routing } from "@/lib/i18n/routing";
 import { siteName, siteUrl } from "@/lib/site";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -70,6 +71,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <ScrollToTop />
       <a
         href="#main-content"
         className="absolute left-[-9999px] top-4 z-[200] rounded-lg bg-yz-accent px-4 py-2 text-sm font-semibold text-zinc-950 focus:left-4 focus:outline-none focus:ring-2 focus:ring-white"

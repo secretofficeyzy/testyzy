@@ -15,7 +15,7 @@ export const business = {
   hours: "Lun–Vin: 09:00–18:00 · Sâm: 10:00–14:00",
   /** Hartă centrată pe adresă; înlocuiește cu „Încorporare hartă” din Google Maps dacă vrei pin exact. */
   mapsEmbedUrl:
-    "https://www.google.com/maps?q=Strada+Miori%C8%9Ba+11%2FA+Chi%C8%99in%C4%83u&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1431.698469146203!2d28.81759560051747!3d46.991442449389325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6342fc60dc383041%3A0x62875026cb74389d!2sYzywheels!5e0!3m2!1sen!2sus!4v1778220545055!5m2!1sen!2sus%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade",
 } as const;
 
 /** tel: fără spații — suportă numere locale MD */
@@ -25,8 +25,8 @@ export function phoneHref(phone: string) {
 }
 
 export const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://facebook.com", label: "Facebook" },
+  { href: "https://www.instagram.com/yzywheels/", label: "Instagram" },
+  { href: "https://www.tiktok.com/@yzywheels", label: "TikTok" },
 ] as const;
 
 /**
