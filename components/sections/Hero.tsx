@@ -33,13 +33,13 @@ export function Hero() {
 
       <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-30" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-end px-4 pb-16 pt-28 text-center sm:justify-center sm:pb-24 sm:pt-32 lg:px-8">
-        <div className="mx-auto w-full max-w-3xl">
+      <div className="relative z-10 mx-auto flex h-full min-h-0 max-w-7xl flex-col items-center justify-center px-4 pb-[max(1.25rem,env(safe-area-inset-bottom,0px))] pt-[max(5.25rem,env(safe-area-inset-top,0px)+3.5rem)] text-center sm:pb-24 sm:pt-32 lg:px-8">
+        <div className="mx-auto w-full max-w-3xl shrink-0">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className="mb-5 text-[11px] font-semibold uppercase tracking-[0.38em] text-yz-accent sm:text-xs"
+            className="mb-4 text-[11px] font-semibold uppercase tracking-[0.38em] text-yz-accent sm:mb-5 sm:text-xs"
           >
             {t("eyebrow")}
           </motion.p>
@@ -58,7 +58,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.14 }}
-            className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg md:text-xl/[1.55]"
+            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-400 sm:mt-8 sm:text-lg md:text-xl/[1.55]"
           >
             {t("lead")}
           </motion.p>
@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.22 }}
-            className="mt-11 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
+            className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <ButtonLink href="/servicii" variant="secondary">
               {t("ctaSecondary")}

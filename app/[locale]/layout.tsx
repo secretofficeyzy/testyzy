@@ -79,7 +79,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         {t("skipToContent")}
       </a>
       <SiteHeader />
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="grow shrink-0">
         {children}
       </main>
       <SiteFooter />
