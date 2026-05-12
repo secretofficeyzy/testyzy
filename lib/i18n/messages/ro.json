@@ -144,12 +144,12 @@
   "aboutPage": {
     "eyebrow": "Brand",
     "title": "YZY WHEELS",
-    "intro": "Am pornit din nevoia unui finisaj care să reziste și în sezonul cu praf și denivelări. Nu vindem „look de poze” — ne uităm la jantă la lumină rece, o simțim pe echilibror, o vedem pe mașină.",
-    "body1": "Lucrăm cu oameni care își cunosc mașina și cu unii care vor doar „să arate mai bine” — în ambele cazuri începem de la ce e real: uzură, geometrie, buget.",
-    "body2": "Echipamentele sunt alese ca să repetăm aceeași calitate: cabine de vopsire, consumabile serioase, flux separat între murdărie și strat fin.",
+    "intro": "Izrail nu a deschis un atelier peste noapte. A lucrat ani de zile pentru alții — nu pentru un salariu, ci ca să înțeleagă meseria cu adevărat, de la zero. ",
+    "body1": "Fiecare jantă tratată, fiecare cabină de vopsire, fiecare detaliu corectat l-a adus mai aproape de ce știa că poate construi. ",
+    "body2": "A absorbit tot ce era bun, a lăsat în urmă ce nu mergea, și când a simțit că e pregătit, a făcut pasul — fără să improvizeze. A investit în cel mai performant și mai scump echipament de vopsire și restaurare din Republica Moldova, pentru că știa că munca bună începe cu uneltele potrivite.",
     "valuesEyebrow": "Ce contează pentru noi",
     "valuesTitle": "Pe scurt",
-    "valuesSubtitle": "unt câteva lucruri la care nu facem compromis, indiferent de lucrare.",
+    "valuesSubtitle": "Sunt câteva lucruri la care nu facem compromis, indiferent de lucrare.",
     "values": {
       "precision": {
         "title": "Precizie",
@@ -164,8 +164,8 @@
         "text": "Îți explicăm de la început ce se poate face și ce nu. Preferăm o discuție sinceră decât promisiuni doar ca să iasă lucrarea."
       }
     },
-    "spaceTitle": "Spațiu gândit pentru treabă curată",
-    "spaceText": "Zone separate pentru pregătire, finisaj și control — mai puțin amestec, mai puține surprize la livrare.",
+    "spaceTitle": "Un atelier gândit, nu improvizat",
+    "spaceText": "Zone separate pentru fiecare etapă — pregătire, finisaj, control. Așa știm că ce iese pe ușă arată exact cum trebuie, nu aproximativ.",
     "heroImageAlt": "Interior atelier, bancuri și echipamente",
     "detailImageAlt": "Detaliu estetic roată sport"
   },

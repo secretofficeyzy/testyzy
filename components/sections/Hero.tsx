@@ -10,7 +10,7 @@ import { images } from "@/lib/site";
 export function Hero() {
   const t = useTranslations("hero");
   return (
-    <section className="relative min-h-[78vh] overflow-hidden sm:min-h-[85vh]">
+    <section className="relative h-[100svh] min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={images.hero}
@@ -33,7 +33,7 @@ export function Hero() {
 
       <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-30" />
 
-      <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-7xl flex-col items-center justify-end px-4 pb-16 pt-28 text-center sm:min-h-[85vh] sm:justify-center sm:pb-24 sm:pt-32 lg:px-8">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-end px-4 pb-16 pt-28 text-center sm:justify-center sm:pb-24 sm:pt-32 lg:px-8">
         <div className="mx-auto w-full max-w-3xl">
           <motion.p
             initial={{ opacity: 0, y: 14 }}

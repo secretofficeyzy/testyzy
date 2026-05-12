@@ -31,9 +31,6 @@ export function CTABanner() {
             {t("primary")}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </ButtonLink>
-          <ButtonLink href="/contact" variant="secondary" className="w-full sm:w-auto">
-            {t("secondary")}
-          </ButtonLink>
         </div>
       </motion.div>
     </section>
