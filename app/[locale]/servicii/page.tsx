@@ -38,8 +38,8 @@ export default async function ServiciiPage({
             eyebrow={t("eyebrow")}
             title={t("title")}
             subtitle={t("subtitle")}
-            align="left"
-            className="mb-0 max-w-2xl lg:translate-x-1"
+            align="center"
+            className="mb-0 max-w-2xl"
             titleClassName="text-5xl md:text-6xl lg:text-7xl"
           />
         </div>

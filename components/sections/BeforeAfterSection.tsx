@@ -77,10 +77,11 @@ export function BeforeAfterSection() {
           eyebrow={t("eyebrow")}
           title={t("title")}
           subtitle={t("subtitle")}
-          className="mb-0 max-w-2xl text-left md:max-w-3xl lg:ml-4 lg:translate-x-2"
+          align="center"
+          className="mb-0 max-w-3xl"
           titleClassName="text-5xl sm:text-6xl md:text-7xl"
         />
-        <p className="mt-4 max-w-xl text-sm text-yz-muted lg:ml-4 lg:translate-x-2">
+        <p className="mx-auto mt-4 max-w-xl text-center text-sm text-yz-muted">
           {t("hint")}
         </p>
       </div>
@@ -144,10 +145,6 @@ export function BeforeAfterSection() {
           </div>
         </div>
       </div>
-
-      <p className="mx-auto mt-8 max-w-2xl px-6 text-center text-xs leading-relaxed text-zinc-600">
-        {t("disclaimer")}
-      </p>
     </section>
   );
 }

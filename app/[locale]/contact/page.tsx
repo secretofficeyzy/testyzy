@@ -35,7 +35,8 @@ export default async function ContactPage({
           eyebrow={t("eyebrow")}
           title={t("title")}
           subtitle={t("subtitle")}
-          className="mb-12 max-w-2xl text-left md:mb-16"
+          align="center"
+          className="mb-12 max-w-2xl md:mb-16"
           titleClassName="text-5xl md:text-6xl"
         />
 

@@ -70,7 +70,8 @@ export default async function DesprePage({
             eyebrow={t("valuesEyebrow")}
             title={t("valuesTitle")}
             subtitle={t("valuesSubtitle")}
-            className="md:max-w-2xl md:text-left"
+            align="center"
+            className="max-w-2xl"
             titleClassName="text-4xl md:text-5xl"
           />
           <div className="mt-14 grid gap-7 md:grid-cols-3 md:gap-6 lg:mt-16">
