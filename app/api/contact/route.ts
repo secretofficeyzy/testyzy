@@ -46,9 +46,9 @@ export async function POST(req: Request) {
         "Ai primit un mesaj nou:",
         `Nume: ${name}`,
         `Email: ${email}`,
-        `Telefon: ${phone}`,
+        `Număr telefon: ${phone}`,
         "",
-        "Mesaj:",
+        "Conținutul mesajului:",
         message,
       ].join("\n"),
     });

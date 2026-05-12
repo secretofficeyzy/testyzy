@@ -106,30 +106,30 @@
   "testimonials": {
     "eyebrow": "Clienți",
     "title": "Ce spun după ce au plecat cu mașina",
-    "subtitle": "Feedback din proiecte reale — nume scurtate, mașina e a lor, nu a noastră.",
+    "subtitle": "Feedback de la oameni cu care am lucrat, exact după cum au fost făcute mașinile.",
     "items": {
       "a": {
-        "quote": "Mi-au refăcut setul de vară când eram convins că e doar „încă un pic uzat”. Comunicare simplă, fără povești.",
-        "author": "Andrei M.",
-        "role": "BMW M3"
+        "quote": "Îmi place foarte tare, eu dorm în mașina asta :)",
+        "author": "Ghena Buda",
+        "role": "BMW 140i"
       },
       "b": {
-        "quote": "Groapă, jantă șifonată — aveam emoții. Au recuperat fără să forțeze. Se simte pe drum că e dreaptă.",
-        "author": "Roxana T.",
-        "role": "Audi A4"
+        "quote": "Personal, cu mâna pe inimă vă spun, că îmi place extraordinar de tare! Un lucru calitativ, care a fost facut de profesioniști!",
+        "author": "Josan Vasile",
+        "role": "AUDI TTs"
       },
       "c": {
-        "quote": "Am vrut galben pe negru, fără aspect vopsit la spray. S-a văzut diferența când am strâns luminile în parcare.",
-        "author": "Mihai D.",
-        "role": "VW Golf"
+        "quote": "Sunt mulțumit de lucrarea făcută, atât ca calitate, cât și timp de execuție. Mulțumiri în special lui Izrail, care a fost foarte profesional și a făcut o lucrare de calitate.",
+        "author": "Anonim",
+        "role": "Porsche 911 GT3 RS"
       }
     }
   },
   "ctaBanner": {
     "title": "Ai deja poze cu setul sau o problemă clară?",
-    "description": "Trimite dimensiuni și imagini — primești răspuns clar, fără termeni complicați.",
-    "primary": "Contact",
-    "secondary": "Contact"
+    "description": "Trimite un mesaj și primești răspuns clar fără termeni complicați",
+    "primary": "Contactează-ne",
+    "secondary": "Contactează-ne"
   },
   "footer": {
     "tagline": "Atelier pentru jante și roți — vopsire, restaurare, montaj. Cu oameni care îți spun direct dacă se merită.",
@@ -138,7 +138,7 @@
     "social": "Social",
     "quoteLink": "Cere ofertă",
     "rights": "Toate drepturile rezervate.",
-    "madeIn": "Lucrat pentru condiții reale pe șosea."
+    "madeIn": "Dezvoltat pentru performanță în condiții reale."
   },
   "aboutPage": {
     "eyebrow": "Brand",
