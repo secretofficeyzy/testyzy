@@ -13,24 +13,18 @@ export function Logo({ className = "" }: Props) {
   return (
     <Link
       href="/"
-      className={`group flex items-center gap-2 ${className}`}
+      className={`group inline-flex items-center ${className}`}
       aria-label={t("home")}
     >
-      <span className="relative h-9 w-9 shrink-0">
+      <span className="relative h-12 w-12 shrink-0 sm:h-[52px] sm:w-[52px]">
         <Image
           src="/logo.svg"
           alt=""
-          width={36}
-          height={36}
-          className="transition-opacity group-hover:opacity-90"
+          width={52}
+          height={52}
+          className="h-full w-full object-contain transition-opacity group-hover:opacity-90"
           priority
         />
-      </span>
-      <span className="yz-display text-2xl tracking-[0.12em] text-white">
-        YZY{" "}
-        <span className="text-yz-accent drop-shadow-[0_0_12px_rgba(250,204,21,0.35)]">
-          WHEELS
-        </span>
       </span>
     </Link>
   );

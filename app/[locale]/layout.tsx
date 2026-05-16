@@ -46,10 +46,6 @@ export async function generateMetadata({
       images: [{ url: "/og.svg", width: 1200, height: 630, alt: siteName }],
     },
     robots: { index: true, follow: true },
-    icons: {
-      icon: "/logo.svg",
-      apple: "/logo.svg",
-    },
   };
 }
 
