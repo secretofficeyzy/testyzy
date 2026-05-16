@@ -33,7 +33,7 @@ export const socialLinks = [
  * Imagini site: înlocuiește URL-urile Unsplash cu fișiere tale.
  * - Pune fișierele în `public/` (ex: `public/photos/hero.jpg`).
  * - Apoi schimbă valorile de mai jos în `/photos/hero.jpg` etc.
- * Altele: logo `public/logo.svg`; favicon în tab `app/icon.png` (regenerează din logo dacă îl înlocuiești). imagine social preview `public/og.svg`,
+ * Altele: logo `public/logo.svg`; tab/telefon: `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico` (regenerează din logo dacă îl înlocuiești). imagine social preview `public/og.svg`,
  * comparație înainte/după în `components/sections/BeforeAfterSection.tsx` (constante BEFORE/AFTER).
  */
 export const images = {
