@@ -19,8 +19,10 @@
   "nav": {
     "home": "Acasă",
     "services": "Servicii",
+    "prices": "Prețuri",
     "about": "Despre",
-    "contact": "Contact"
+    "contact": "Contact",
+    "booking": "Programare online"
   },
   "meta": {
     "home": {
@@ -42,6 +44,14 @@
     "quote": {
       "title": "Cere ofertă",
       "description": "Formular pentru ofertă YZY WHEELS — tip jantă, dimensiune, serviciu, poze."
+    },
+    "prices": {
+      "title": "Prețuri",
+      "description": "Prețuri YZY WHEELS — restaurare și vopsire jante, schimb sezonier de roți. Tarife clare, fără surprize."
+    },
+    "booking": {
+      "title": "Programare online",
+      "description": "Programează-te online la serviciile de vulcanizare YZY WHEELS — sudare, îndreptare jante, reparații anvelope, montaj și balansare."
     }
   },
   "hero": {
@@ -56,6 +66,135 @@
     "eyebrow": "Ce facem zi de zi?",
     "title": "În atelier",
     "subtitle": "În fiecare zi trec pe la noi jante zgâriate, lovite sau pur și simplu uzate. Unele au nevoie de o revopsire, altele de restaurare completă. Le luăm pe rând, le pregătim corect și nu le dăm din atelier până nu arată cum trebuie."
+  },
+  "atelier": {
+    "eyebrow": "Ce facem zi de zi?",
+    "title": "În atelier",
+    "subtitle": "Trei direcții, un singur loc. Apasă pe oricare bloc ca să vezi exact ce facem — fără să pleci de pe pagină.",
+    "expand": "Vezi serviciile",
+    "collapse": "Închide",
+    "categories": {
+      "recondicionare": {
+        "title": "Recondiționare jante",
+        "short": "Vopsire, restaurare, diamond cut și vopsire etriere — readucem jantele la viață.",
+        "services": {
+          "vopsire": {
+            "title": "Vopsire jante",
+            "description": "Curățăm, pregătim și vopsim corect, fără grabă. Finisajul trebuie să iasă uniform și să reziste în timp, nu doar în poze."
+          },
+          "restaurare": {
+            "title": "Restaurare jante",
+            "description": "Zgârieturi, lovituri sau uzură — corectăm ce trebuie, refacem suprafața și aducem janta cât mai aproape de starea originală."
+          },
+          "diamond_cut": {
+            "title": "Diamond cut",
+            "description": "Refacem finisajul diamantat prin strunjire de precizie, urmat de lac protector pentru un aspect curat și durabil."
+          },
+          "etriere": {
+            "title": "Vopsire etriere",
+            "description": "Un detaliu mic care schimbă mult aspectul. Materiale rezistente la temperaturi ridicate și utilizare zilnică."
+          }
+        }
+      },
+      "vulcanizare": {
+        "title": "Servicii vulcanizare",
+        "short": "Sudare, îndreptare jante, reparații complexe anvelope, montare/demontare și balansare.",
+        "services": {
+          "sudare": {
+            "title": "Sudare jante",
+            "description": "Reparăm fisuri și crăpături prin sudare profesională, acolo unde intervenția se poate face sigur."
+          },
+          "indreptare": {
+            "title": "Îndreptare jante",
+            "description": "Diagnosticăm devierile și îndreptăm jantele atunci când se poate face corect, fără improvizații."
+          },
+          "reparatii": {
+            "title": "Reparații complexe anvelope",
+            "description": "Verificăm și reparăm anvelopele corect — inclusiv cazurile mai dificile, cu atenție la siguranță."
+          },
+          "montaj": {
+            "title": "Montare / demontare anvelope",
+            "description": "Montaj atent, cu echipament potrivit, fără să riscăm zgârierea jantelor."
+          },
+          "balansare": {
+            "title": "Balansare",
+            "description": "Echilibrare precisă pentru un mers lin, fără vibrații la viteză."
+          }
+        }
+      },
+      "shop": {
+        "title": "YZY Shop",
+        "short": "Anvelope, jante și accesorii pentru roți — direct de la noi.",
+        "services": {
+          "anvelope": {
+            "title": "Anvelope",
+            "description": "Gamă de anvelope pentru sezon și performanță, alese pe mașina ta."
+          },
+          "jante": {
+            "title": "Jante",
+            "description": "Jante noi care se potrivesc stilului și dimensiunilor mașinii tale."
+          },
+          "accesorii": {
+            "title": "Accesorii roți",
+            "description": "Senzori, prezoane, distanțiere și alte accesorii pentru roți."
+          }
+        },
+        "cta": "Vizitează YZY Shop"
+      }
+    }
+  },
+  "bookingPage": {
+    "eyebrow": "Rezervă-ți locul",
+    "title": "Programare online",
+    "subtitle": "Programează-te online la serviciile de vulcanizare: sudare, îndreptare jante, reparații complexe anvelope, montare/demontare anvelope și balansare.",
+    "services": {
+      "sudare": "Sudare",
+      "indreptare": "Îndreptare jante",
+      "reparatii": "Reparații anvelope",
+      "montaj": "Montare / demontare",
+      "balansare": "Balansare"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Tarife",
+    "title": "Prețuri",
+    "subtitle": "Tarife clare pentru restaurarea jantelor și schimbul sezonier de roți. Fără surprize la final.",
+    "unitMdl": "MDL",
+    "unitLei": "lei",
+    "restoration": {
+      "title": "Restaurare & vopsire jante",
+      "subtitle": "Preț pe set, în funcție de diametru și tipul lucrării.",
+      "note": "Toate prețurile includ TVA.",
+      "cols": {
+        "size": "Diametru",
+        "paint": "Vopsire într-o culoare",
+        "paintDiamond": "Vopsire + diamond cut",
+        "diamondOnly": "Diamond cut + lac (fără vopsire)"
+      },
+      "extras": {
+        "exhaust": "Duza tobei de eșapament — 300 MDL",
+        "brakeSupport": "Suportul frânei (4 bucăți) — 3000 MDL"
+      }
+    },
+    "swap": {
+      "title": "Schimb roți sezonier (complex)",
+      "subtitle": "Tarife standard percepute la serviciul complex de schimb sezonier al roților, pe unitate de transport.",
+      "cols": {
+        "size": "Diametru",
+        "price": "Preț"
+      },
+      "extras": {
+        "removeSmall": "Scos/pus roata R13–R18 (fără balansare) — 150 lei (4 buc)",
+        "removeBig": "Scos/pus roata R19–R23 (fără balansare) — 200 lei (4 buc)",
+        "sensor": "Scos/pus senzor presiune — 50 lei/senzor",
+        "runflat": "Anvelope RunFlat — +50 lei/roată"
+      },
+      "notes": {
+        "clean1": "Vă rugăm să veniți cu roțile și mașina curate.",
+        "clean2": "Nu lucrăm cu roți murdare — reziduurile nu permit efectuarea corectă a balansării și murdăresc zona de lucru.",
+        "wash": "Dacă este nevoie, spălăm noi roata — 50 lei/buc. Mersi pentru înțelegere."
+      }
+    }
   },
   "servicesList": {
     "vopsire_jante": {
@@ -99,8 +238,8 @@
     "eyebrow": "Transformare",
     "title": "Before & After",
     "subtitle": "Nu e editare. E aceeași jantă, înainte și după.",
-    "before": "Înainte",
-    "after": "După",
+    "before": "După",
+    "after": "Înainte",
     "hint": "Click pe imagine, apoi ← / → de la tastatură, sau trage cu mouse-ul."
   },
   "testimonials": {
@@ -116,12 +255,12 @@
       "b": {
         "quote": "Personal, cu mâna pe inimă vă spun, că îmi place extraordinar de tare! Un lucru calitativ, care a fost facut de profesioniști!",
         "author": "Josan Vasile",
-        "role": "AUDI TTs"
+        "role": "AUDI TT"
       },
       "c": {
         "quote": "Sunt mulțumit de lucrarea făcută, atât ca calitate, cât și timp de execuție. Mulțumiri în special lui Izrail, care a fost foarte profesional și a făcut o lucrare de calitate!",
         "author": "Anonim",
-        "role": "Porsche 911 GT3 RS"
+        "role": "Porsche 911 GT3"
       }
     }
   },
@@ -166,7 +305,31 @@
     "spaceTitle": "Un atelier gândit, nu improvizat",
     "spaceText": "Zone separate pentru fiecare etapă — pregătire, finisaj, control. Așa știm că ce iese pe ușă arată exact cum trebuie, nu aproximativ.",
     "heroImageAlt": "Interior atelier, bancuri și echipamente",
-    "detailImageAlt": "Detaliu estetic roată sport"
+    "detailImageAlt": "Detaliu estetic roată sport",
+    "storyEyebrow": "Povestea",
+    "galleryEyebrow": "Galerie",
+    "galleryTitle": "Din atelier",
+    "gallerySubtitle": "Câteva lucrări și momente surprinse chiar la noi în atelier.",
+    "findUs": "Ne găsești aici",
+    "highlightsEyebrow": "De ce noi",
+    "highlights": {
+      "equipment": {
+        "title": "Echipament premium",
+        "text": "Unul dintre cele mai performante utilaje de vopsire și restaurare din Republica Moldova."
+      },
+      "zones": {
+        "title": "Zone separate",
+        "text": "Pregătire, finisaj și control — fiecare etapă la locul ei, fără improvizații."
+      },
+      "verified": {
+        "title": "Lucrări verificate",
+        "text": "Nimic nu pleacă din atelier până nu arată și nu funcționează exact cum trebuie."
+      }
+    },
+    "ctaTitle": "Vrei să discutăm despre jantele tale?",
+    "ctaText": "Trimite câteva poze sau programează-te direct. Îți spunem clar ce se poate face.",
+    "ctaPrimary": "Contactează-ne",
+    "ctaSecondary": "Programare online"
   },
   "contactPage": {
     "eyebrow": "Legătură",

@@ -13,9 +13,9 @@ import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const BEFORE =
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&sat=-100";
+  "/photos/before.jpg";
 const AFTER =
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80";
+  "/photos/after.jpg";
 
 export function BeforeAfterSection() {
   const t = useTranslations("beforeAfter");

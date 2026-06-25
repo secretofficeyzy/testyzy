@@ -1,37 +1,38 @@
 import type { LucideIcon } from "lucide-react";
-import { Disc3, Gem, Paintbrush, Palette, Wrench } from "lucide-react";
-import { images, type ServiceId } from "@/lib/site";
+import { Disc3, Gem, ShoppingBag } from "lucide-react";
+import { images } from "@/lib/site";
 
-export type ServiceItem = {
-  id: ServiceId;
+/** Categorii afișate în secțiunea „În atelier” — fiecare se extinde fluid. */
+export type AtelierCategoryId = "recondicionare" | "vulcanizare" | "shop";
+
+export type AtelierCategory = {
+  id: AtelierCategoryId;
   icon: LucideIcon;
   image: string;
+  /** Cheile sub-serviciilor (i18n: atelier.categories.<id>.services.<key>) */
+  services: string[];
+  /** Marchează blocul ca magazin (afișează buton extern). */
+  shop?: boolean;
 };
 
-export const services: ServiceItem[] = [
+export const atelierCategories: AtelierCategory[] = [
   {
-    id: "vopsire_jante",
-    icon: Paintbrush,
-    image: images.wheelClose,
-  },
-  {
-    id: "restaurare_jante",
+    id: "recondicionare",
     icon: Gem,
     image: images.repair,
+    services: ["vopsire", "restaurare", "diamond_cut", "etriere"],
   },
   {
-    id: "vopsire_etriere",
-    icon: Palette,
-    image: images.caliper,
-  },
-  {
-    id: "consultanta_montaj",
-    icon: Wrench,
-    image: images.mount,
-  },
-  {
-    id: "vulcanizare_indreptare",
+    id: "vulcanizare",
     icon: Disc3,
     image: images.tireBay,
+    services: ["sudare", "indreptare", "reparatii", "montaj", "balansare"],
+  },
+  {
+    id: "shop",
+    icon: ShoppingBag,
+    image: images.wheelClose,
+    services: ["anvelope", "jante", "accesorii"],
+    shop: true,
   },
 ];

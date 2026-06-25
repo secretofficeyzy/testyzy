@@ -68,9 +68,12 @@ export function Hero() {
             transition={{ duration: 0.4, delay: 0.22 }}
             className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4"
           >
-            <ButtonLink href="/servicii" variant="secondary">
+            <a
+              href="#servicii"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-yz-accent/40 bg-yz-surface/80 px-6 py-3 text-sm font-medium text-yz-text backdrop-blur transition-all duration-300 hover:border-yz-accent hover:bg-yz-surface active:scale-[0.98]"
+            >
               {t("ctaSecondary")}
-            </ButtonLink>
+            </a>
             <ButtonLink href="/contact" variant="primary">
               {t("ctaPrimary")}
               <ChevronRight className="h-4 w-4" aria-hidden />

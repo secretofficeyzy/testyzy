@@ -1,13 +1,13 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { CalendarCheck, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { Logo } from "@/components/layout/Logo";
 import { Link, usePathname } from "@/lib/i18n/navigation";
-import { mainNav } from "@/lib/nav";
+import { bookingNav, mainNav } from "@/lib/nav";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -59,6 +59,13 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 lg:flex lg:gap-3">
           <LocaleSwitcher />
+          <Link
+            href={bookingNav.href}
+            className="group inline-flex items-center gap-2 rounded-lg bg-yz-accent px-4 py-2 text-sm font-semibold text-zinc-950 shadow-[0_0_30px_-5px_rgba(250,204,21,0.5)] transition-all duration-300 hover:bg-yellow-400 hover:shadow-[0_0_40px_-5px_rgba(250,204,21,0.65)] active:scale-[0.98]"
+          >
+            <CalendarCheck className="h-4 w-4" aria-hidden />
+            {tNav(bookingNav.key)}
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -100,6 +107,14 @@ export function SiteHeader() {
                   {tNav(link.key)}
                 </Link>
               ))}
+              <Link
+                href={bookingNav.href}
+                onClick={() => setOpen(false)}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-yz-accent px-4 py-3 text-base font-semibold text-zinc-950 transition hover:bg-yellow-400"
+              >
+                <CalendarCheck className="h-5 w-5" aria-hidden />
+                {tNav(bookingNav.key)}
+              </Link>
             </nav>
           </motion.div>
         ) : null}

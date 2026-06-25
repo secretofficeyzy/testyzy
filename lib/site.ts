@@ -30,21 +30,40 @@ export const socialLinks = [
 ] as const;
 
 /**
- * Imagini site: înlocuiește URL-urile Unsplash cu fișiere tale.
- * - Pune fișierele în `public/` (ex: `public/photos/hero.jpg`).
- * - Apoi schimbă valorile de mai jos în `/photos/hero.jpg` etc.
- * Altele: logo `public/logo.svg`; tab/telefon: `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico` (regenerează din logo dacă îl înlocuiești). imagine social preview `public/og.svg`,
- * comparație înainte/după în `components/sections/BeforeAfterSection.tsx` (constante BEFORE/AFTER).
+ * Programare online (Cal.com).
+ * Format: „utilizator/eveniment” (ex: „yzywheels/vulcanizare”).
+ * Setează `NEXT_PUBLIC_CALCOM_LINK` în `.env.local` cu link-ul tău real.
  */
+export const calcomLink =
+  process.env.NEXT_PUBLIC_CALCOM_LINK ?? "yzywheels/vulcanizare";
+
+/** Magazin online YZY Shop — setează `NEXT_PUBLIC_YZYSHOP_URL` când e gata. */
+export const yzyShopUrl =
+  process.env.NEXT_PUBLIC_YZYSHOP_URL ?? "https://yzyshop.md";
+
+
 export const images = {
-  hero: "https://images.unsplash.com/photo-1594500067378-24336f95870f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  workshop: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80",
-  wheelClose: "https://images.unsplash.com/photo-1708869327956-7416dfc27712?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  repair: "https://images.unsplash.com/photo-1672619438903-694a7dc3c8a6?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  tireBay: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&q=80",
+  hero: "/photos/heropoza.jpg",
+  workshop: "/photos/despre.jpg",
+  wheelClose: "/photos/accesorii.jpg",
+  repair: "/photos/recond.jpg",
+  tireBay: "/photos/vulc.jpg",
   caliper: "https://images.unsplash.com/photo-1710464081714-4ed52a70ca5f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   mount: "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 } as const;
+
+/**
+ * Galerie foto (pagina „Despre”). Pune fișierele în `public/photos/`
+ * și actualizează lista — poți adăuga/șterge câte poze vrei.
+ */
+export const galleryImages = [
+  "/photos/galerie1.jpg",
+  "/photos/galerie2.jpg",
+  "/photos/galerie3.jpg",
+  "/photos/galerie4.jpg",
+  "/photos/galerie5.jpg",
+  "/photos/galerie6.jpg",
+] as const;
 
 export type ServiceId =
   | "vopsire_jante"
