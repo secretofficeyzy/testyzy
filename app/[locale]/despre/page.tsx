@@ -181,36 +181,6 @@ export default async function DesprePage({
         </div>
       </section>
 
-      {/* ===== Space ===== */}
-      <section className="border-t border-yz-border bg-yz-elevated py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-            <Reveal delay={0.1} className="lg:order-2">
-              <div className="relative aspect-video overflow-hidden rounded-3xl border border-yz-border bg-black yz-card-glow lg:rotate-[-0.5deg]">
-                <Image
-                  src={images.hero}
-                  alt={t("detailImageAlt")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width:1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              </div>
-            </Reveal>
-            <Reveal className="flex flex-col justify-center lg:order-1 lg:pr-6">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-yz-border bg-yz-surface/50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-yz-accent">
-                <Layers className="h-3.5 w-3.5" aria-hidden />
-                {t("valuesEyebrow")}
-              </span>
-              <h3 className="yz-display mt-5 text-3xl tracking-wide text-white md:text-4xl">
-                {t("spaceTitle")}
-              </h3>
-              <p className="mt-5 text-yz-muted sm:text-lg">{t("spaceText")}</p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* ===== CTA ===== */}
       <section className="relative overflow-hidden border-t border-yz-border py-16 md:py-20">
         <div className="pointer-events-none absolute -right-20 top-6 h-72 w-72 rounded-full bg-yellow-500/10 blur-3xl" />

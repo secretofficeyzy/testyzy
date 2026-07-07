@@ -76,23 +76,23 @@
     "categories": {
       "recondicionare": {
         "title": "Recondiționare jante",
-        "short": "Vopsire, restaurare, diamond cut și vopsire etriere — readucem jantele la viață.",
+        "short": "Recondiționăm complet jantele prin vopsire, restaurare, diamond cut și vopsire etriere, cu finisaj impecabil și durabilitate garantată.",
         "services": {
           "vopsire": {
             "title": "Vopsire jante",
-            "description": "Curățăm, pregătim și vopsim corect, fără grabă. Finisajul trebuie să iasă uniform și să reziste în timp, nu doar în poze."
+            "description": "Redăm aspectul perfect al jantelor printr-un proces complet de pregătire și vopsire profesională. Folosim materiale de calitate și finisaje rezistente, pentru un rezultat care arată impecabil și rezistă în timp."
           },
           "restaurare": {
             "title": "Restaurare jante",
-            "description": "Zgârieturi, lovituri sau uzură — corectăm ce trebuie, refacem suprafața și aducem janta cât mai aproape de starea originală."
+            "description": "Eliminăm zgârieturile, loviturile și urmele de uzură, refăcând forma și aspectul jantei cu atenție la fiecare detaliu. Scopul nostru este să o readucem cât mai aproape de starea originală."
           },
           "diamond_cut": {
-            "title": "Diamond cut",
-            "description": "Refacem finisajul diamantat prin strunjire de precizie, urmat de lac protector pentru un aspect curat și durabil."
+            "title": "DIAMOND CUT",
+            "description": "Refacem finisajul diamantat prin prelucrare de înaltă precizie, urmată de aplicarea unui strat protector de lac. Rezultatul este un aspect elegant, precis și o protecție de lungă durată."
           },
           "etriere": {
             "title": "Vopsire etriere",
-            "description": "Un detaliu mic care schimbă mult aspectul. Materiale rezistente la temperaturi ridicate și utilizare zilnică."
+            "description": "Oferim etrierelor un aspect modern și o protecție suplimentară prin utilizarea vopselelor speciale, rezistente la temperaturi ridicate și la utilizarea zilnică. Un detaliu care completează perfect aspectul mașinii."
           }
         }
       },
@@ -199,7 +199,7 @@
   "servicesList": {
     "vopsire_jante": {
       "title": "Vopsire jante",
-      "short": "Curățăm, pregătim și vopsim corect, fără grabă. Finisajul trebuie să iasă uniform și să reziste, nu doar să arate bine în poze.",
+      "short": "Redăm aspectul perfect al jantelor printr-un proces complet de pregătire și vopsire profesională. Folosim materiale de calitate și finisaje rezistente, pentru un rezultat care arată impecabil și rezistă în timp.",
       "description": "Nu dăm doar un strat nou de vopsea. Janta este curățată, pregătită și verificată înainte de finisaj. Scopul e simplu: să arate bine și după timp, nu doar când pleacă din atelier.",
       "imageAlt": "Jantă în proces de vopsire profesională"
     },
