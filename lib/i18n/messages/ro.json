@@ -57,8 +57,8 @@
   "hero": {
     "eyebrow": "Atelier jante & anvelope",
     "line1": "YZY WHEELS",
-    "line2": "Nu refacem jante. Le readucem la viață.",
-    "lead": "Jantele nu sunt doar un detaliu. Sunt prima impresie, iar noi le aducem înapoi la nivelul pe care îl merită.",
+    "line2": "Detaliile fac diferența. Noi le readucem la perfecțiune.",
+    "lead": "Servicii profesionale de recondiționare jante, vopsire și personalizare pentru cei care apreciază fiecare detaliu.",
     "ctaPrimary": "Contactează-ne",
     "ctaSecondary": "Ce facem concret"
   },
@@ -70,7 +70,7 @@
   "atelier": {
     "eyebrow": "Ce facem zi de zi?",
     "title": "În atelier",
-    "subtitle": "Trei direcții, un singur loc. Apasă pe oricare bloc ca să vezi exact ce facem — fără să pleci de pe pagină.",
+    "subtitle": "Punem la dispoziție servicii complete și produse de calitate pentru jante și anvelope. Explorează secțiunile de mai jos și descoperă ce putem face pentru mașina ta.",
     "expand": "Vezi serviciile",
     "collapse": "Închide",
     "categories": {
@@ -98,45 +98,45 @@
       },
       "vulcanizare": {
         "title": "Servicii vulcanizare",
-        "short": "Sudare, îndreptare jante, reparații complexe anvelope, montare/demontare și balansare.",
+        "short": "Oferim servicii complete de vulcanizare, de la reparații și îndreptarea jantelor până la montaj, echilibrare și întreținerea anvelopelor, cu atenție la calitate și siguranță.",
         "services": {
           "sudare": {
             "title": "Sudare jante",
-            "description": "Reparăm fisuri și crăpături prin sudare profesională, acolo unde intervenția se poate face sigur."
+            "description": "Reparăm fisurile și crăpăturile jantelor prin sudură profesională, acolo unde reparația poate fi efectuată în condiții de siguranță."
           },
           "indreptare": {
             "title": "Îndreptare jante",
-            "description": "Diagnosticăm devierile și îndreptăm jantele atunci când se poate face corect, fără improvizații."
+            "description": "Corectăm deformările jantelor cu echipamente specializate, pentru a reda forma și funcționarea corectă a acestora."
           },
           "reparatii": {
             "title": "Reparații complexe anvelope",
-            "description": "Verificăm și reparăm anvelopele corect — inclusiv cazurile mai dificile, cu atenție la siguranță."
+            "description": "Identificăm și remediem defectele anvelopelor folosind materiale și proceduri profesionale, cu accent pe siguranță și fiabilitate."
           },
           "montaj": {
             "title": "Montare / demontare anvelope",
-            "description": "Montaj atent, cu echipament potrivit, fără să riscăm zgârierea jantelor."
+            "description": "Montăm și demontăm anvelopele cu echipamente moderne, pentru a proteja atât jantele, cât și anvelopele. Lucrăm cu atenție la fiecare detaliu pentru un montaj realizat în condiții optime."
           },
           "balansare": {
             "title": "Balansare",
-            "description": "Echilibrare precisă pentru un mers lin, fără vibrații la viteză."
+            "description": "Realizăm balansarea roților cu aparatură de precizie, pentru eliminarea vibrațiilor și o rulare stabilă. O echilibrare corectă contribuie la confortul în timpul condusului și la uzura uniformă a anvelopelor."
           }
         }
       },
       "shop": {
         "title": "YZY Shop",
-        "short": "Anvelope, jante și accesorii pentru roți — direct de la noi.",
+        "short": "Descoperă o gamă variată de anvelope, jante și accesorii auto, atent selectate pentru siguranță, performanță și un aspect impecabil al mașinii tale.",
         "services": {
           "anvelope": {
             "title": "Anvelope",
-            "description": "Gamă de anvelope pentru sezon și performanță, alese pe mașina ta."
+            "description": "Oferim anvelope pentru toate sezoanele și stilurile de condus, de la producători de încredere, în dimensiuni potrivite pentru orice tip de autovehicul."
           },
           "jante": {
             "title": "Jante",
-            "description": "Jante noi care se potrivesc stilului și dimensiunilor mașinii tale."
+            "description": "Punem la dispoziție jante din aliaj și oțel, disponibile în diverse modele și dimensiuni, pentru un echilibru perfect între design și funcționalitate."
           },
           "accesorii": {
             "title": "Accesorii roți",
-            "description": "Senzori, prezoane, distanțiere și alte accesorii pentru roți."
+            "description": "Găsești o gamă completă de accesorii pentru roți, inclusiv senzori TPMS, prezoane, distanțiere, inele de centrare și alte componente esențiale."
           }
         },
         "cta": "Vizitează YZY Shop"
@@ -282,9 +282,9 @@
   "aboutPage": {
     "eyebrow": "Brand",
     "title": "YZY WHEELS",
-    "intro": "Izrail nu a deschis un atelier peste noapte. A lucrat ani de zile pentru alții — nu pentru un salariu, ci ca să înțeleagă meseria cu adevărat, de la zero. ",
-    "body1": "Fiecare jantă tratată, fiecare cabină de vopsire, fiecare detaliu corectat l-a adus mai aproape de ce știa că poate construi. ",
-    "body2": "A absorbit tot ce era bun, a lăsat în urmă ce nu mergea, și când a simțit că e pregătit, a făcut pasul — fără să improvizeze. A investit în cel mai performant și mai scump echipament de vopsire și restaurare din Republica Moldova, pentru că știa că munca bună începe cu uneltele potrivite.",
+    "intro": "Izrail nu a construit acest atelier peste noapte. Înainte de a porni pe propriul drum, a acumulat ani de experiență lucrând pentru alții, învățând fiecare etapă a meseriei și construind baza pentru ceea ce avea să creeze mai târziu.",
+    "body1": "Fiecare jantă restaurată, fiecare proiect finalizat și fiecare detaliu pus la punct au construit, pas cu pas, drumul spre ceea ce este astăzi.",
+    "body2": "A acumulat experiență pas cu pas, a păstrat doar ceea ce aduce rezultate și a ales să evolueze fără compromisuri. Investiția în echipamente profesionale de vopsire și restaurare a fost un pas important pentru a putea oferi lucrări realizate la cele mai înalte standarde, unde fiecare detaliu contează.",
     "valuesEyebrow": "Ce contează pentru noi",
     "valuesTitle": "Pe scurt",
     "valuesSubtitle": "Sunt câteva lucruri la care nu facem compromis, indiferent de lucrare.",
@@ -319,7 +319,7 @@
       },
       "zones": {
         "title": "Zone separate",
-        "text": "Pregătire, finisaj și control — fiecare etapă la locul ei, fără improvizații."
+        "text": "Fiecare etapă este realizată cu atenție, de la pregătire până la finisajul final, pentru un rezultat corect și de calitate."
       },
       "verified": {
         "title": "Lucrări verificate",
@@ -338,7 +338,6 @@
     "company": "Date contact",
     "formTitle": "Trimite un mesaj",
     "formHint": "Validare automată — nu trimite date de plată în formular.",
-    "mapNote": "Hartă demonstrativă — înlocuiește cu adresa ta reală.",
     "mapTitle": "Locație pe hartă"
   },
   "quotePage": {

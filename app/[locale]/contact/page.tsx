@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BusinessContactList } from "@/components/business/BusinessContactList";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { LocalePageParams } from "@/lib/i18n/page-params";
 import { business } from "@/lib/site";
@@ -31,17 +32,19 @@ export default async function ContactPage({
   return (
     <div className="border-t border-yz-border bg-yz-bg py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-          align="center"
-          className="mb-12 max-w-2xl md:mb-16"
-          titleClassName="text-5xl md:text-6xl"
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            align="center"
+            className="mb-12 max-w-2xl md:mb-16"
+            titleClassName="text-5xl md:text-6xl"
+          />
+        </Reveal>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-14">
-          <div className="space-y-8 lg:translate-y-1">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-14">
+          <Reveal delay={0.08} className="space-y-8">
             <address className="not-italic space-y-6 rounded-2xl border border-yz-border bg-yz-surface/40 p-7 sm:p-8">
               <h2 className="yz-display text-2xl tracking-wide text-white sm:text-3xl">
                 {t("company")}
@@ -60,21 +63,20 @@ export default async function ContactPage({
                 referrerPolicy="no-referrer-when-downgrade"
                 className="aspect-video min-h-[260px] w-full bg-zinc-900 sm:min-h-[280px]"
               />
-              <p className="border-t border-yz-border px-4 py-3 text-center text-xs text-zinc-500">
-                {t("mapNote")}
-              </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="rounded-2xl border border-yz-border bg-yz-surface/30 p-6 sm:p-9 lg:-translate-y-1">
-            <h2 className="yz-display text-2xl tracking-wide text-white sm:text-3xl">
-              {t("formTitle")}
-            </h2>
-            <p className="mt-2 text-sm text-yz-muted">{t("formHint")}</p>
-            <div className="mt-8">
-              <ContactForm />
+          <Reveal delay={0.08}>
+            <div className="rounded-2xl border border-yz-border bg-yz-surface/30 p-6 sm:p-9">
+              <h2 className="yz-display text-2xl tracking-wide text-white sm:text-3xl">
+                {t("formTitle")}
+              </h2>
+              <p className="mt-2 text-sm text-yz-muted">{t("formHint")}</p>
+              <div className="mt-8">
+                <ContactForm />
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </div>

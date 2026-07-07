@@ -1,16 +1,7 @@
-/**
- * Prețuri YZY WHEELS — sursa de adevăr (numere).
- * Textele (titluri, coloane, note) sunt în i18n: namespace `pricing`.
- */
-
-/** Restaurare / vopsire jante — prețuri în MDL (includ TVA). */
 export type RestorationRow = {
   size: string;
-  /** Vopsire jante într-o culoare */
   paint: number;
-  /** Vopsire într-o culoare + diamond cut */
   paintDiamond: number;
-  /** Diamond cut + lac (fără vopsire) */
   diamondOnly: number;
 };
 
@@ -29,7 +20,6 @@ export const restorationRows: RestorationRow[] = [
 
 export const restorationExtras = ["exhaust", "brakeSupport"] as const;
 
-/** Schimb roți sezonier (complex) — prețuri în lei / unitate de transport. */
 export type SwapRow = { size: string; price: number };
 
 export const swapRows: SwapRow[] = [

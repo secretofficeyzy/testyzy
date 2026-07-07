@@ -1,17 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/Button";
+import { easeOut } from "@/lib/motion";
 import { images } from "@/lib/site";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const reduce = useReducedMotion();
+
   return (
-    <section className="relative h-[100svh] min-h-[100svh] overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
+      <motion.div
+        className="absolute inset-0"
+        initial={reduce ? false : { scale: 1.66 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.8, ease: easeOut }}
+      >
         <Image
           src={images.hero}
           alt=""
@@ -21,66 +29,113 @@ export function Hero() {
           className="object-cover object-center"
           aria-hidden
         />
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/55"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_35%,rgba(250,204,21,0.1),transparent_55%)]"
-          aria-hidden
-        />
-      </div>
+      </motion.div>
 
-      <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-30" />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/70 to-yz-bg"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(250,204,21,0.14),transparent_60%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-yellow-500/5"
+        aria-hidden
+      />
+      <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-25" />
 
-      <div className="relative z-10 mx-auto flex h-full min-h-0 max-w-7xl flex-col items-center justify-center px-4 pb-[max(1.25rem,env(safe-area-inset-bottom,0px))] pt-[max(5.25rem,env(safe-area-inset-top,0px)+3.5rem)] text-center sm:pb-24 sm:pt-32 lg:px-8">
-        <div className="mx-auto w-full max-w-3xl shrink-0">
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
+      <div
+        className="pointer-events-none absolute left-0 top-1/3 h-px w-24 bg-gradient-to-r from-yz-accent/60 to-transparent sm:w-32"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute right-0 top-2/3 h-px w-24 bg-gradient-to-l from-yz-accent/40 to-transparent sm:w-32"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto flex h-full min-h-0 max-w-7xl flex-col items-center justify-center px-4 pb-[max(3.5rem,env(safe-area-inset-bottom,0px)+2rem)] pt-[max(5.25rem,env(safe-area-inset-top,0px)+3.5rem)] text-center sm:pb-28 sm:pt-32 lg:px-8">
+        <div className="mx-auto w-full max-w-4xl shrink-0">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="mb-4 text-[11px] font-semibold uppercase tracking-[0.38em] text-yz-accent sm:mb-5 sm:text-xs"
+            transition={{ duration: 0.45, ease: easeOut }}
+            className="mb-6 flex justify-center sm:mb-7"
           >
-            {t("eyebrow")}
-          </motion.p>
+            <span className="inline-flex items-center gap-2 rounded-full border border-yz-accent/35 bg-yz-accent/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em] text-yz-accent backdrop-blur-sm sm:text-xs">
+              <Sparkles className="h-3.5 w-3.5" aria-hidden />
+              {t("eyebrow")}
+            </span>
+          </motion.div>
+
           <motion.h1
-            initial={{ opacity: 0, y: 22 }}
+            initial={reduce ? false : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.06 }}
-            className="yz-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.92] tracking-wide text-white"
+            transition={{ duration: 0.55, delay: reduce ? 0 : 0.08, ease: easeOut }}
+            className="yz-display text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] tracking-wide text-white"
           >
             <span className="yz-glow-text block">{t("line1")}</span>
-            <span className="mx-auto mt-1 block max-w-2xl text-[clamp(1.35rem,4.5vw,2.25rem)] font-[family-name:var(--font-manrope)] font-semibold normal-case tracking-tight text-yz-accent">
+            <span className="mx-auto mt-2 block max-w-2xl text-[clamp(1.25rem,4.2vw,2.1rem)] font-[family-name:var(--font-manrope)] font-semibold normal-case leading-snug tracking-tight text-yz-accent">
               {t("line2")}
             </span>
           </motion.h1>
+
+          <motion.div
+            initial={reduce ? false : { scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: reduce ? 0 : 0.2, ease: easeOut }}
+            className="mx-auto mt-6 h-px w-20 bg-gradient-to-r from-transparent via-yz-accent to-transparent sm:mt-8 sm:w-28"
+            aria-hidden
+          />
+
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.14 }}
-            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-400 sm:mt-8 sm:text-lg md:text-xl/[1.55]"
+            transition={{ duration: 0.45, delay: reduce ? 0 : 0.18, ease: easeOut }}
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-400 sm:mt-8 sm:text-lg md:text-xl/[1.55]"
           >
             {t("lead")}
           </motion.p>
+
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
+            initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.22 }}
-            className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4"
+            transition={{ duration: 0.4, delay: reduce ? 0 : 0.28, ease: easeOut }}
+            className="mt-9 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <a
               href="#servicii"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-yz-accent/40 bg-yz-surface/80 px-6 py-3 text-sm font-medium text-yz-text backdrop-blur transition-all duration-300 hover:border-yz-accent hover:bg-yz-surface active:scale-[0.98]"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-yz-accent/40 bg-yz-surface/80 px-6 py-3.5 text-sm font-medium text-yz-text backdrop-blur transition-all duration-300 hover:border-yz-accent hover:bg-yz-surface active:scale-[0.98] sm:w-auto"
             >
               {t("ctaSecondary")}
             </a>
-            <ButtonLink href="/contact" variant="primary">
+            <ButtonLink
+              href="/contact"
+              variant="primary"
+              className="w-full px-8 py-3.5 sm:w-auto"
+            >
               {t("ctaPrimary")}
               <ChevronRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
           </motion.div>
         </div>
       </div>
+
+      <motion.a
+        href="#servicii"
+        initial={reduce ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: reduce ? 0 : 0.9, duration: 0.5 }}
+        className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 text-yz-muted transition-colors hover:text-yz-accent sm:bottom-8"
+        aria-label={t("ctaSecondary")}
+      >
+        <ChevronDown className="h-5 w-5 animate-bounce" aria-hidden />
+      </motion.a>
+
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yz-bg to-transparent"
+        aria-hidden
+      />
     </section>
   );
 }

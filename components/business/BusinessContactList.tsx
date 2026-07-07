@@ -2,7 +2,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { business, phoneHref } from "@/lib/site";
 
 type Props = {
-  /** `compact` = footer (iconițe mai mici) */
   variant?: "default" | "compact";
 };
 

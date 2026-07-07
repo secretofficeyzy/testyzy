@@ -15,7 +15,6 @@ export function Logo({ className = "" }: Props) {
       className={`group inline-flex items-center ${className}`}
       aria-label={t("home")}
     >
-      {/* img nativ: next/image + SVG e instabil pe iOS Safari */}
       <img
         src="/logo.svg"
         alt=""

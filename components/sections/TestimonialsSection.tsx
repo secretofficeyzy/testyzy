@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal } from "@/components/ui/Reveal";
 
 const keys = ["a", "b", "c"] as const;
 
@@ -31,15 +32,17 @@ export function TestimonialsSection() {
   return (
     <section className="border-t border-yz-border bg-yz-bg py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-          className="mx-auto max-w-2xl text-center"
-          titleClassName="text-[clamp(1.85rem,4vw,3rem)] tracking-[0.14em] md:text-5xl"
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            className="mx-auto max-w-2xl text-center"
+            titleClassName="text-[clamp(1.85rem,4vw,3rem)] tracking-[0.14em] md:text-5xl"
+          />
+        </Reveal>
 
-        <div className="relative mx-auto max-w-3xl lg:max-w-[40rem]">
+        <Reveal delay={0.1} y={32} className="relative mx-auto max-w-3xl lg:max-w-[40rem]">
           <Quote
             className="absolute -left-1 -top-5 h-14 w-14 text-yz-accent/15 sm:-left-4 md:h-16 md:w-16"
             aria-hidden
@@ -102,7 +105,7 @@ export function TestimonialsSection() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

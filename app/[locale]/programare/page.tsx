@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CalBooking } from "@/components/sections/CalBooking";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { LocalePageParams } from "@/lib/i18n/page-params";
 
@@ -29,16 +30,19 @@ export default async function ProgramarePage({
   return (
     <div className="border-t border-yz-border bg-yz-bg py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-          align="center"
-          className="mb-10 max-w-2xl md:mb-14"
-          titleClassName="text-5xl md:text-6xl"
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            align="center"
+            className="mb-10 max-w-2xl md:mb-14"
+            titleClassName="text-5xl md:text-6xl"
+          />
+        </Reveal>
 
-        <ul className="mx-auto mb-10 flex max-w-3xl flex-wrap justify-center gap-x-3 gap-y-2 md:mb-14">
+        <Reveal delay={0.08}>
+          <ul className="mx-auto mb-10 flex max-w-3xl flex-wrap justify-center gap-x-3 gap-y-2 md:mb-14">
           {["sudare", "indreptare", "reparatii", "montaj", "balansare"].map(
             (key) => (
               <li
@@ -49,9 +53,12 @@ export default async function ProgramarePage({
               </li>
             ),
           )}
-        </ul>
+          </ul>
+        </Reveal>
 
-        <CalBooking />
+        <Reveal delay={0.14} y={32}>
+          <CalBooking />
+        </Reveal>
       </div>
     </div>
   );

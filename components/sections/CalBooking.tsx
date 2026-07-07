@@ -10,7 +10,6 @@ declare global {
   }
 }
 
-/** Embed inline Cal.com — temă întunecată, asortată cu designul YZY. */
 export function CalBooking() {
   useEffect(() => {
     (function (C: any, A: string, L: string) {

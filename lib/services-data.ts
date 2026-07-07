@@ -2,16 +2,13 @@ import type { LucideIcon } from "lucide-react";
 import { Disc3, Gem, ShoppingBag } from "lucide-react";
 import { images } from "@/lib/site";
 
-/** Categorii afișate în secțiunea „În atelier” — fiecare se extinde fluid. */
 export type AtelierCategoryId = "recondicionare" | "vulcanizare" | "shop";
 
 export type AtelierCategory = {
   id: AtelierCategoryId;
   icon: LucideIcon;
   image: string;
-  /** Cheile sub-serviciilor (i18n: atelier.categories.<id>.services.<key>) */
   services: string[];
-  /** Marchează blocul ca magazin (afișează buton extern). */
   shop?: boolean;
 };
 

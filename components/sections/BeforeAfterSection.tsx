@@ -10,6 +10,7 @@ import Image from "next/image";
 import type { KeyboardEvent } from "react";
 import { useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const BEFORE =
@@ -73,20 +74,22 @@ export function BeforeAfterSection() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yz-accent/40 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-          align="center"
-          className="mb-0 max-w-3xl"
-          titleClassName="text-5xl sm:text-6xl md:text-7xl"
-        />
-        <p className="mx-auto mt-4 max-w-xl text-center text-sm text-yz-muted">
-          {t("hint")}
-        </p>
+        <Reveal>
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            align="center"
+            className="mb-0 max-w-3xl"
+            titleClassName="text-5xl sm:text-6xl md:text-7xl"
+          />
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm text-yz-muted">
+            {t("hint")}
+          </p>
+        </Reveal>
       </div>
 
-      <div className="relative w-full px-0">
+      <Reveal delay={0.12} y={40} className="relative w-full px-0">
         <div className="relative mx-auto max-w-[100vw]">
           <div
             ref={containerRef}
@@ -144,7 +147,7 @@ export function BeforeAfterSection() {
             </motion.div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function CTABanner() {
   const t = useTranslations("ctaBanner");
@@ -13,11 +13,8 @@ export function CTABanner() {
       <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-yellow-500/10 blur-3xl" />
       <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 via-transparent to-transparent" />
       <div className="yz-grid-bg absolute inset-0 opacity-25" />
-      <motion.div
-        initial={{ opacity: 0, y: 22 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.55 }}
+      <Reveal
+        y={28}
         className="relative z-10 mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-8"
       >
         <h2 className="yz-display text-[clamp(1.75rem,4vw,2.75rem)] tracking-wide text-white md:text-5xl">
@@ -32,7 +29,7 @@ export function CTABanner() {
             <ArrowRight className="h-4 w-4" aria-hidden />
           </ButtonLink>
         </div>
-      </motion.div>
+      </Reveal>
     </section>
   );
 }

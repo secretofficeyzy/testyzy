@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal } from "@/components/ui/Reveal";
 import type { LocalePageParams } from "@/lib/i18n/page-params";
 import {
   restorationExtras,
@@ -40,19 +41,21 @@ export default async function PreturiPage({
       <section className="relative overflow-hidden py-14 md:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_0%,rgba(250,204,21,0.1),transparent_55%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow={t("eyebrow")}
-            title={t("title")}
-            subtitle={t("subtitle")}
-            align="center"
-            className="mb-0 max-w-2xl"
-            titleClassName="text-5xl md:text-6xl lg:text-7xl"
-          />
+          <Reveal>
+            <SectionHeading
+              eyebrow={t("eyebrow")}
+              title={t("title")}
+              subtitle={t("subtitle")}
+              align="center"
+              className="mb-0 max-w-2xl"
+              titleClassName="text-5xl md:text-6xl lg:text-7xl"
+            />
+          </Reveal>
         </div>
       </section>
 
       <div className="mx-auto max-w-7xl space-y-16 px-4 pb-24 sm:px-6 lg:space-y-20 lg:px-8">
-        {/* === Restaurare jante === */}
+        <Reveal delay={0.06} className="block">
         <section>
           <h2 className="yz-display text-3xl tracking-wide text-white md:text-4xl">
             {t("restoration.title")}
@@ -117,8 +120,9 @@ export default async function PreturiPage({
             {t("restoration.note")}
           </p>
         </section>
+        </Reveal>
 
-        {/* === Schimbare jante (sezonier) === */}
+        <Reveal delay={0.1} className="block">
         <section>
           <h2 className="yz-display text-3xl tracking-wide text-white md:text-4xl">
             {t("swap.title")}
@@ -176,6 +180,7 @@ export default async function PreturiPage({
             ))}
           </div>
         </section>
+        </Reveal>
       </div>
     </div>
   );

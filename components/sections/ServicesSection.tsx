@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal, RevealItem, RevealStagger } from "@/components/ui/Reveal";
 import { Link } from "@/lib/i18n/navigation";
 import {
   atelierCategories,
@@ -24,65 +25,68 @@ export function ServicesSection() {
       className="scroll-mt-24 border-t border-yz-border bg-yz-bg py-16 md:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-          align="center"
-          className="mb-10 md:mb-14"
-          titleClassName="text-[clamp(2rem,4.5vw,3.5rem)] md:text-5xl lg:text-6xl"
-        />
+        <Reveal y={20} blur>
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            align="center"
+            className="mb-10 md:mb-14"
+            titleClassName="text-[clamp(2rem,4.5vw,3.5rem)] md:text-5xl lg:text-6xl"
+          />
+        </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <RevealStagger className="grid gap-6 md:grid-cols-3 md:items-stretch">
           {atelierCategories.map((cat) => {
             const Icon = cat.icon;
             const isActive = active === cat.id;
             return (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => setActive(isActive ? null : cat.id)}
-                aria-expanded={isActive}
-                className={`group yz-card-glow relative block overflow-hidden rounded-2xl border bg-yz-surface/60 text-left transition duration-300 hover:-translate-y-1 ${
-                  isActive
-                    ? "border-yz-accent/60 -translate-y-1"
-                    : "border-yz-border"
-                }`}
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={cat.image}
-                    alt={t(`categories.${cat.id}.title`)}
-                    fill
-                    sizes="(max-width:768px) 100vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                  <span className="absolute bottom-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-yz-accent/20 text-yz-accent backdrop-blur">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </span>
-                </div>
-                <div className="p-5">
-                  <h3 className="yz-display text-2xl tracking-wide text-white">
-                    {t(`categories.${cat.id}.title`)}
-                  </h3>
-                  <p className="mt-2 text-sm text-yz-muted">
-                    {t(`categories.${cat.id}.short`)}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-yz-accent">
-                    {isActive ? t("collapse") : t("expand")}
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-300 ${
-                        isActive ? "rotate-180" : ""
-                      }`}
-                      aria-hidden
+              <RevealItem key={cat.id}>
+                <button
+                  type="button"
+                  onClick={() => setActive(isActive ? null : cat.id)}
+                  aria-expanded={isActive}
+                  className={`group yz-card-glow flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-yz-surface/60 text-left transition duration-300 hover:-translate-y-1 ${
+                    isActive
+                      ? "border-yz-accent/60 -translate-y-1"
+                      : "border-yz-border"
+                  }`}
+                >
+                  <div className="relative h-48 shrink-0 overflow-hidden sm:h-52">
+                    <Image
+                      src={cat.image}
+                      alt={t(`categories.${cat.id}.title`)}
+                      fill
+                      sizes="(max-width:768px) 100vw, 33vw"
+                      className="object-cover object-center transition duration-500 group-hover:brightness-110"
                     />
-                  </span>
-                </div>
-              </button>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                    <span className="absolute bottom-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-yz-accent/20 text-yz-accent backdrop-blur">
+                      <Icon className="h-5 w-5" aria-hidden />
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h3 className="yz-display line-clamp-2 min-h-[3.25rem] text-2xl tracking-wide text-white">
+                      {t(`categories.${cat.id}.title`)}
+                    </h3>
+                    <p className="mt-2 line-clamp-4 min-h-[5.5rem] text-sm leading-relaxed text-yz-muted">
+                      {t(`categories.${cat.id}.short`)}
+                    </p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-semibold uppercase tracking-wider text-yz-accent">
+                      {isActive ? t("collapse") : t("expand")}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          isActive ? "rotate-180" : ""
+                        }`}
+                        aria-hidden
+                      />
+                    </span>
+                  </div>
+                </button>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealStagger>
 
         <AnimatePresence initial={false} mode="wait">
           {active ? (
@@ -91,7 +95,7 @@ export function ServicesSection() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden"
             >
               <CategoryDetail id={active} />
@@ -133,7 +137,6 @@ function CategoryDetail({ id }: { id: AtelierCategoryId }) {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="mt-6 grid overflow-hidden rounded-3xl border border-yz-accent/25 bg-gradient-to-br from-yz-surface/70 via-yz-surface/40 to-yz-bg shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] lg:grid-cols-12"
     >
-      {/* Visual */}
       <div className="relative min-h-[240px] overflow-hidden lg:col-span-5 lg:min-h-full">
         <motion.div
           initial={{ scale: 1.08 }}
@@ -163,7 +166,6 @@ function CategoryDetail({ id }: { id: AtelierCategoryId }) {
         </div>
       </div>
 
-      {/* Service list */}
       <div className="p-6 sm:p-8 lg:col-span-7 lg:p-10">
         <motion.ul
           variants={listVariants}
