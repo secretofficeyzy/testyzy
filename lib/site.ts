@@ -5,7 +5,7 @@ export const siteUrl =
 
 export const business = {
   name: siteName,
-  email: "contact@yzywheels.md",
+  email: "office@yzywheels.md",
   phones: ["060 666 517", "079 449 558"] as const,
   address: "Strada Miorița 11A, Chișinău",
   hours: "Lun–Vin: 08:00–18:00 · Sâm: 08:00–14:00 · Dum: Închis",
