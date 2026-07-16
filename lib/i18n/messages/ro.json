@@ -348,7 +348,7 @@
   "forms": {
     "contact": {
       "name": "Nume",
-      "email": "Email",
+      "email": "E-mail",
       "phone": "Telefon",
       "message": "Mesaj",
       "sending": "Se trimite…",
