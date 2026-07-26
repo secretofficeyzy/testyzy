@@ -12,7 +12,7 @@ export function Logo({ className = "" }: Props) {
   return (
     <Link
       href="/"
-      className={`group inline-flex items-center ${className}`}
+      className={`group inline-flex items-center transition duration-300 hover:drop-shadow-[0_0_12px_rgba(250,204,21,0.35)] ${className}`}
       aria-label={t("home")}
     >
       <img

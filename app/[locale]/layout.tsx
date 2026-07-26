@@ -9,6 +9,7 @@ import type { LocalePageParams } from "@/lib/i18n/page-params";
 import { routing } from "@/lib/i18n/routing";
 import { siteName, siteUrl } from "@/lib/site";
 import ScrollToTop from "@/components/ScrollToTop";
+import { SiteIntro } from "@/components/layout/SiteIntro";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -23,8 +24,8 @@ export async function generateMetadata({
   const base = locale === "ru" ? "ru_RU" : "ro_RO";
   const title =
     locale === "ru"
-      ? `${siteName} — диски, покраска, восстановление`
-      : `${siteName} — jante, vopsire, restaurare`;
+      ? `${siteName} — покраска и восстановление дисков, шиномонтаж`
+      : `${siteName} — vopsire jante, restaurare, vulcanizare`;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -34,8 +35,8 @@ export async function generateMetadata({
     },
     description:
       locale === "ru"
-        ? "YZY WHEELS: покраска дисков, суппортов, восстановление, шиномонтаж."
-        : "YZY WHEELS: vopsire jante, etriere, restaurare, vulcanizare.",
+        ? "YZY WHEELS Кишинёв — покраска и восстановление дисков, алмазная проточка, суппорты, шиномонтаж и онлайн-запись."
+        : "YZY WHEELS Chișinău — vopsire și restaurare jante, diamond cut, etriere, vulcanizare și programare online.",
     authors: [{ name: siteName }],
     openGraph: {
       type: "website",
@@ -68,6 +69,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ScrollToTop />
+      <SiteIntro />
       <a
         href="#main-content"
         className="absolute left-[-9999px] top-4 z-[200] rounded-lg bg-yz-accent px-4 py-2 text-sm font-semibold text-zinc-950 focus:left-4 focus:outline-none focus:ring-2 focus:ring-white"

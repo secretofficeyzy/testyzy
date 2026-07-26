@@ -68,11 +68,10 @@ export async function SiteFooter() {
             </p>
           </div>
         </div>
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-yz-border pt-10 sm:flex-row sm:items-center">
+        <div className="mt-14 border-t border-yz-border pt-10 text-center">
           <p className="text-xs text-zinc-600">
             © {year} {siteName}. {t("rights")}
           </p>
-          <p className="text-xs text-zinc-600">{t("madeIn")}</p>
         </div>
       </div>
     </footer>

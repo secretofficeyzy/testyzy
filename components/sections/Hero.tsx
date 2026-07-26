@@ -5,20 +5,26 @@ import Image from "next/image";
 import { ChevronDown, ChevronRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/Button";
+import { useIntroComplete } from "@/hooks/useIntroComplete";
 import { easeOut } from "@/lib/motion";
 import { images } from "@/lib/site";
 
 export function Hero() {
   const t = useTranslations("hero");
   const reduce = useReducedMotion();
+  const { complete: introComplete, mounted, skipIntro } = useIntroComplete();
+  const heroReady = reduce || introComplete;
 
   return (
     <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
       <motion.div
         className="absolute inset-0"
-        initial={reduce ? false : { scale: 1.66 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.8, ease: easeOut }}
+        initial={false}
+        animate={{ scale: !mounted ? 1.66 : heroReady ? 1 : 1.66 }}
+        transition={{
+          duration: skipIntro && heroReady ? 0 : 1.85,
+          ease: easeOut,
+        }}
       >
         <Image
           src={images.hero}
@@ -54,12 +60,19 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex h-full min-h-0 max-w-7xl flex-col items-center justify-center px-4 pb-[max(3.5rem,env(safe-area-inset-bottom,0px)+2rem)] pt-[max(5.25rem,env(safe-area-inset-top,0px)+3.5rem)] text-center sm:pb-28 sm:pt-32 lg:px-8">
+      <div className="relative z-10 mx-auto flex h-full min-h-0 max-w-7xl flex-col items-center justify-center px-4 pb-[max(3.5rem,env(safe-area-inset-bottom,0px)+2rem)] pt-[max(6rem,env(safe-area-inset-top,0px)+4.5rem)] text-center sm:pb-28 sm:pt-36 lg:px-8">
         <div className="mx-auto w-full max-w-4xl shrink-0">
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, ease: easeOut }}
+            initial={false}
+            animate={
+              mounted && heroReady
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 14 }
+            }
+            transition={{
+              duration: skipIntro ? 0 : 0.45,
+              ease: easeOut,
+            }}
             className="mb-6 flex justify-center sm:mb-7"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-yz-accent/35 bg-yz-accent/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em] text-yz-accent backdrop-blur-sm sm:text-xs">
@@ -69,9 +82,17 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={reduce ? false : { opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: reduce ? 0 : 0.08, ease: easeOut }}
+            initial={false}
+            animate={
+              mounted && heroReady
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 22 }
+            }
+            transition={{
+              duration: skipIntro ? 0 : 0.55,
+              delay: skipIntro ? 0 : 0.08,
+              ease: easeOut,
+            }}
             className="yz-display text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] tracking-wide text-white"
           >
             <span className="yz-glow-text block">{t("line1")}</span>
@@ -81,26 +102,46 @@ export function Hero() {
           </motion.h1>
 
           <motion.div
-            initial={reduce ? false : { scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.6, delay: reduce ? 0 : 0.2, ease: easeOut }}
+            initial={false}
+            animate={{ scaleX: mounted && heroReady ? 1 : 0 }}
+            transition={{
+              duration: skipIntro ? 0 : 0.6,
+              delay: skipIntro ? 0 : 0.2,
+              ease: easeOut,
+            }}
             className="mx-auto mt-6 h-px w-20 bg-gradient-to-r from-transparent via-yz-accent to-transparent sm:mt-8 sm:w-28"
             aria-hidden
           />
 
           <motion.p
-            initial={reduce ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: reduce ? 0 : 0.18, ease: easeOut }}
+            initial={false}
+            animate={
+              mounted && heroReady
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 18 }
+            }
+            transition={{
+              duration: skipIntro ? 0 : 0.45,
+              delay: skipIntro ? 0 : 0.18,
+              ease: easeOut,
+            }}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-400 sm:mt-8 sm:text-lg md:text-xl/[1.55]"
           >
             {t("lead")}
           </motion.p>
 
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: reduce ? 0 : 0.28, ease: easeOut }}
+            initial={false}
+            animate={
+              mounted && heroReady
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 14 }
+            }
+            transition={{
+              duration: skipIntro ? 0 : 0.4,
+              delay: skipIntro ? 0 : 0.28,
+              ease: easeOut,
+            }}
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <a
@@ -123,9 +164,9 @@ export function Hero() {
 
       <motion.a
         href="#servicii"
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: reduce ? 0 : 0.9, duration: 0.5 }}
+        initial={false}
+        animate={{ opacity: mounted && heroReady ? 1 : 0 }}
+        transition={{ delay: skipIntro ? 0 : 0.9, duration: skipIntro ? 0 : 0.5 }}
         className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 text-yz-muted transition-colors hover:text-yz-accent sm:bottom-8"
         aria-label={t("ctaSecondary")}
       >

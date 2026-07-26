@@ -27,7 +27,7 @@
   "meta": {
     "home": {
       "title": "Acasă",
-      "description": "YZY WHEELS — vopsire și restaurare jante, etriere, vulcanizare. Atelier auto dedicat: ofertă clară, execuție atentă."
+      "description": "YZY WHEELS Chișinău — vopsire și restaurare jante, diamond cut, etriere, vulcanizare și programare online. Atelier premium pentru jante și anvelope."
     },
     "services": {
       "title": "Servicii",
@@ -52,12 +52,24 @@
     "booking": {
       "title": "Programare online",
       "description": "Programează-te online la serviciile de vulcanizare YZY WHEELS — sudare, îndreptare jante, reparații anvelope, montaj și balansare."
+    },
+    "shop": {
+      "title": "YZY Shop",
+      "description": "YZY Shop — merch oficial și anvelope & jante în colaborare cu PneuExpert. Prețuri și mărimi disponibile la YZY WHEELS, Chișinău."
+    },
+    "shopMerch": {
+      "title": "Merch YZY",
+      "description": "Tricouri și șepci cu logo YZY WHEELS. Mărimi disponibile, prețuri afișate clar. Ne scrii și rezolvăm."
+    },
+    "shopPneu": {
+      "title": "Anvelope & Jante",
+      "description": "Aducem anvelope și jante direct în atelier, prin parteneriatul cu PneuExpert. Vine în curând."
     }
   },
   "hero": {
-    "eyebrow": "Atelier jante & anvelope",
+    "eyebrow": "ATELIER SPECIALIZAT ÎN RECONDIȚIONARE JANTE",
     "line1": "YZY WHEELS",
-    "line2": "Detaliile fac diferența. Noi le readucem la perfecțiune.",
+    "line2": "De la zgârieturi la strălucire. Recondiționăm jante la perfecțiune.",
     "lead": "Servicii profesionale de recondiționare jante, vopsire și personalizare pentru cei care apreciază fiecare detaliu.",
     "ctaPrimary": "Contactează-ne",
     "ctaSecondary": "Ce facem concret"
@@ -76,7 +88,7 @@
     "categories": {
       "recondicionare": {
         "title": "Recondiționare jante",
-        "short": "Recondiționăm complet jantele prin vopsire, restaurare, diamond cut și vopsire etriere, cu finisaj impecabil și durabilitate garantată.",
+        "short": "Vopsire, restaurare, DIAMOND CUT și chiar vopsirea etrierelor — servicii complete de recondiționare jante, cu finisaj impecabil și durabilitate garantată.",
         "services": {
           "vopsire": {
             "title": "Vopsire jante",
@@ -124,7 +136,7 @@
       },
       "shop": {
         "title": "YZY Shop",
-        "short": "Descoperă o gamă variată de anvelope, jante și accesorii auto, atent selectate pentru siguranță, performanță și un aspect impecabil al mașinii tale.",
+        "short": "Descoperă o gamă variată de anvelope, jante și accesorii auto, atent selectate pentru siguranță, performanță și un aspect impecabil al mașinii tale. Pe lângă acestea, mai ai acces la merch oficial YZY WHEELS.",
         "services": {
           "anvelope": {
             "title": "Anvelope",
@@ -422,5 +434,74 @@
     "label": "Limbă",
     "ro": "RO",
     "ru": "RU"
+  },
+  "shopPage": {
+    "eyebrow": "YZY Shop",
+    "title": "YZY Shop",
+    "hubSubtitle": "Alege ce te interesează — merch oficial YZY sau anvelope și jante selectate împreună cu partenerul nostru PneuExpert.",
+    "backToHub": "Înapoi la YZY Shop",
+    "badge": "Merch YZY",
+    "currency": "MDL",
+    "sizeLabel": "Mărimi disponibile",
+    "contactNote": "Pentru disponibilitate și detalii, contactează-ne direct — telefon, mesaj sau vizită în atelier.",
+    "filters": {
+      "all": "Toate"
+    },
+    "hub": {
+      "explore": "Explorează",
+      "merch": {
+        "eyebrow": "Merch oficial",
+        "title": "Tricouri & Șepci",
+        "description": "Tricouri și șepci cu logo YZY WHEELS. Mărimi disponibile, prețuri afișate clar. Ne scrii și rezolvăm."
+      },
+      "pneu": {
+        "eyebrow": "În colaborare cu PneuExpert",
+        "title": "Anvelope & Jante",
+        "description": "Aducem anvelope și jante direct în atelier, prin parteneriatul cu PneuExpert. Vine în curând."
+      }
+    },
+    "merch": {
+      "eyebrow": "Merch oficial",
+      "title": "Tricouri & Șepci",
+      "subtitle": "Produse YZY WHEELS — poze, prețuri și mărimi disponibile."
+    },
+    "pneu": {
+      "eyebrow": "Parteneriat",
+      "title": "Anvelope & Jante",
+      "subtitle": "Colaborare PneuExpert × YZY WHEELS — catalogul va fi disponibil în curând.",
+      "partnerBadge": "Colaborare PneuExpert × YZY WHEELS",
+      "comingSoon": "Coming soon",
+      "comingSoonHint": "Pregătim selecția de anvelope și jante. Revino curând sau contactează-ne pentru întrebări."
+    },
+    "categories": {
+      "tshirts": "Tricouri",
+      "caps": "Șepci"
+    },
+    "products": {
+      "tee_logo_black": {
+        "name": "Tricou Logo — Negru",
+        "description": "Tricou premium cu logo YZY WHEELS, croială confortabilă."
+      },
+      "tee_logo_white": {
+        "name": "Tricou Logo — Alb",
+        "description": "Tricou premium cu logo YZY WHEELS, material respirabil."
+      },
+      "tee_wheel_black": {
+        "name": "Tricou Wheel Graphic",
+        "description": "Design cu roată stilizată YZY — cultura auto în fiecare detaliu."
+      },
+      "cap_classic_black": {
+        "name": "Șapcă Classic — Negru",
+        "description": "Șapcă clasică cu logo brodat, reglabilă."
+      },
+      "cap_classic_yellow": {
+        "name": "Șapcă Classic — Galben",
+        "description": "Șapcă în culoarea brandului YZY, logo brodat."
+      },
+      "cap_trucker": {
+        "name": "Șapcă Trucker",
+        "description": "Model trucker cu plasă respirabilă și logo YZY WHEELS."
+      }
+    }
   }
 }

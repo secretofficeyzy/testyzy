@@ -23,10 +23,10 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
             key={loc}
             type="button"
             onClick={() => router.replace(pathname, { locale: loc })}
-            className={`min-w-9 rounded-full px-2.5 py-1.5 text-[11px] font-bold tracking-wider transition-colors md:min-w-10 md:px-3 ${
+            className={`min-w-9 rounded-full px-2.5 py-1.5 text-[11px] font-bold tracking-wider transition-all duration-300 md:min-w-10 md:px-3 ${
               isOn
-                ? "bg-yz-accent text-zinc-950"
-                : "text-yz-muted hover:text-white"
+                ? "bg-yz-accent text-zinc-950 shadow-[0_0_16px_-4px_rgba(250,204,21,0.6)]"
+                : "text-yz-muted hover:bg-white/5 hover:text-white"
             }`}
           >
             {loc === "ro" ? t("ro") : t("ru")}
