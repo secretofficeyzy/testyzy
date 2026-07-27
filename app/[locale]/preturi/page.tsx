@@ -29,7 +29,7 @@ export default async function PreturiPage({
 
   return (
     <div className="border-t border-yz-border bg-yz-bg">
-      <section className="relative overflow-hidden py-14 md:py-20 lg:py-24">
+      <section className="yz-page-hero relative overflow-hidden pb-14 md:pb-20 lg:pb-24">
         <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-25" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_0%,rgba(250,204,21,0.12),transparent_55%)]" />
         <div className="pointer-events-none absolute -right-24 top-1/3 h-56 w-56 rounded-full bg-yz-accent/8 blur-3xl" />

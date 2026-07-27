@@ -10,14 +10,74 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/ui/Reveal";
 import { Link } from "@/lib/i18n/navigation";
 import {
   atelierCategories,
+  type AtelierCategory,
   type AtelierCategoryId,
 } from "@/lib/services-data";
 
 const MotionLink = motion.create(Link);
 
+type CategoryCardProps = {
+  category: AtelierCategory;
+  isActive: boolean;
+  onToggle: () => void;
+};
+
+function CategoryCard({ category, isActive, onToggle }: CategoryCardProps) {
+  const t = useTranslations("atelier");
+  const Icon = category.icon;
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-expanded={isActive}
+      className={`group yz-card-glow flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-yz-surface/60 text-left transition duration-300 hover:-translate-y-1 ${
+        isActive
+          ? "border-yz-accent/60 -translate-y-1"
+          : "border-yz-border"
+      }`}
+    >
+      <div className="relative h-48 shrink-0 overflow-hidden sm:h-52">
+        <Image
+          src={category.image}
+          alt={t(`categories.${category.id}.title`)}
+          fill
+          sizes="(max-width:768px) 100vw, 33vw"
+          className="object-cover object-center transition duration-500 group-hover:brightness-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+        <span className="absolute bottom-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-yz-accent/20 text-yz-accent backdrop-blur">
+          <Icon className="h-5 w-5" aria-hidden />
+        </span>
+      </div>
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="yz-display line-clamp-2 min-h-[3.25rem] text-2xl tracking-wide text-white">
+          {t(`categories.${category.id}.title`)}
+        </h3>
+        <p className="mt-2 line-clamp-4 min-h-[5.5rem] text-sm leading-relaxed text-yz-muted">
+          {t(`categories.${category.id}.short`)}
+        </p>
+        <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-semibold uppercase tracking-wider text-yz-accent">
+          {isActive ? t("collapse") : t("expand")}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-300 ${
+              isActive ? "rotate-180" : ""
+            }`}
+            aria-hidden
+          />
+        </span>
+      </div>
+    </button>
+  );
+}
+
 export function ServicesSection() {
   const t = useTranslations("atelier");
   const [active, setActive] = useState<AtelierCategoryId | null>(null);
+
+  const toggle = (id: AtelierCategoryId) => {
+    setActive((current) => (current === id ? null : id));
+  };
 
   return (
     <section
@@ -36,67 +96,55 @@ export function ServicesSection() {
           />
         </Reveal>
 
-        <RevealStagger className="grid gap-6 md:grid-cols-3 md:items-stretch">
-          {atelierCategories.map((cat) => {
-            const Icon = cat.icon;
-            const isActive = active === cat.id;
-            return (
-              <RevealItem key={cat.id}>
-                <button
-                  type="button"
-                  onClick={() => setActive(isActive ? null : cat.id)}
-                  aria-expanded={isActive}
-                  className={`group yz-card-glow flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-yz-surface/60 text-left transition duration-300 hover:-translate-y-1 ${
-                    isActive
-                      ? "border-yz-accent/60 -translate-y-1"
-                      : "border-yz-border"
-                  }`}
-                >
-                  <div className="relative h-48 shrink-0 overflow-hidden sm:h-52">
-                    <Image
-                      src={cat.image}
-                      alt={t(`categories.${cat.id}.title`)}
-                      fill
-                      sizes="(max-width:768px) 100vw, 33vw"
-                      className="object-cover object-center transition duration-500 group-hover:brightness-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
-                    <span className="absolute bottom-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-yz-accent/20 text-yz-accent backdrop-blur">
-                      <Icon className="h-5 w-5" aria-hidden />
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h3 className="yz-display line-clamp-2 min-h-[3.25rem] text-2xl tracking-wide text-white">
-                      {t(`categories.${cat.id}.title`)}
-                    </h3>
-                    <p className="mt-2 line-clamp-4 min-h-[5.5rem] text-sm leading-relaxed text-yz-muted">
-                      {t(`categories.${cat.id}.short`)}
-                    </p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-semibold uppercase tracking-wider text-yz-accent">
-                      {isActive ? t("collapse") : t("expand")}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-300 ${
-                          isActive ? "rotate-180" : ""
-                        }`}
-                        aria-hidden
-                      />
-                    </span>
-                  </div>
-                </button>
-              </RevealItem>
-            );
-          })}
+        <div className="flex flex-col gap-6 md:hidden">
+          {atelierCategories.map((cat) => (
+            <RevealItem key={cat.id}>
+              <div>
+                <CategoryCard
+                  category={cat}
+                  isActive={active === cat.id}
+                  onToggle={() => toggle(cat.id)}
+                />
+                <AnimatePresence initial={false}>
+                  {active === cat.id ? (
+                    <motion.div
+                      key={`${cat.id}-detail-mobile`}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <CategoryDetail id={cat.id} className="mt-4" />
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
+              </div>
+            </RevealItem>
+          ))}
+        </div>
+
+        <RevealStagger className="hidden gap-6 md:grid md:grid-cols-3 md:items-stretch">
+          {atelierCategories.map((cat) => (
+            <RevealItem key={cat.id}>
+              <CategoryCard
+                category={cat}
+                isActive={active === cat.id}
+                onToggle={() => toggle(cat.id)}
+              />
+            </RevealItem>
+          ))}
         </RevealStagger>
 
         <AnimatePresence initial={false} mode="wait">
           {active ? (
             <motion.div
-              key={active}
+              key={`${active}-detail-desktop`}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden"
+              className="hidden overflow-hidden md:block"
             >
               <CategoryDetail id={active} />
             </motion.div>
@@ -123,7 +171,13 @@ const itemVariants = {
   },
 };
 
-function CategoryDetail({ id }: { id: AtelierCategoryId }) {
+function CategoryDetail({
+  id,
+  className = "mt-6",
+}: {
+  id: AtelierCategoryId;
+  className?: string;
+}) {
   const t = useTranslations("atelier");
   const category = atelierCategories.find((c) => c.id === id);
   if (!category) return null;
@@ -135,7 +189,7 @@ function CategoryDetail({ id }: { id: AtelierCategoryId }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="mt-6 grid overflow-hidden rounded-3xl border border-yz-accent/25 bg-gradient-to-br from-yz-surface/70 via-yz-surface/40 to-yz-bg shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] lg:grid-cols-12"
+      className={`${className} grid overflow-hidden rounded-3xl border border-yz-accent/25 bg-gradient-to-br from-yz-surface/70 via-yz-surface/40 to-yz-bg shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] lg:grid-cols-12`}
     >
       <div className="relative min-h-[240px] overflow-hidden lg:col-span-5 lg:min-h-full">
         <motion.div

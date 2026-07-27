@@ -30,7 +30,7 @@ export default async function ContactPage({
   const t = await getTranslations("contactPage");
 
   return (
-    <div className="border-t border-yz-border bg-yz-bg py-16 md:py-24 lg:py-28">
+    <div className="yz-page-hero border-t border-yz-border bg-yz-bg pb-16 md:pb-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading

@@ -30,6 +30,10 @@ html {
   scroll-padding-top: 5.5rem;
 }
 
+.yz-page-hero {
+  padding-top: max(6.75rem, calc(env(safe-area-inset-top, 0px) + 5.5rem));
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

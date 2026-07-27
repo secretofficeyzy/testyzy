@@ -4,27 +4,62 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { useIntroComplete } from "@/hooks/useIntroComplete";
+import { hasSeenIntro } from "@/lib/intro";
+import { usePathname } from "@/lib/i18n/navigation";
 import { easeOut } from "@/lib/motion";
 import { images } from "@/lib/site";
+
+const ZOOM_FROM = 1.66;
+const ZOOM_DURATION = 1.85;
 
 export function Hero() {
   const t = useTranslations("hero");
   const reduce = useReducedMotion();
-  const { complete: introComplete, mounted, skipIntro } = useIntroComplete();
-  const heroReady = reduce || introComplete;
+  const pathname = usePathname();
+  const { complete: introComplete, mounted } = useIntroComplete();
+  const isHome = pathname === "/";
+  const [scale, setScale] = useState(ZOOM_FROM);
+  const [contentReady, setContentReady] = useState(false);
+
+  useEffect(() => {
+    if (!mounted || !isHome || reduce) {
+      setScale(reduce ? 1 : ZOOM_FROM);
+      setContentReady(reduce || !isHome);
+      return;
+    }
+
+    const introPending = !hasSeenIntro() && !introComplete;
+    if (introPending) {
+      setScale(ZOOM_FROM);
+      setContentReady(false);
+      return;
+    }
+
+    setScale(ZOOM_FROM);
+    setContentReady(false);
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setScale(1));
+    });
+    const contentTimer = window.setTimeout(
+      () => setContentReady(true),
+      280,
+    );
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(contentTimer);
+    };
+  }, [mounted, isHome, introComplete, reduce]);
 
   return (
     <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
       <motion.div
         className="absolute inset-0"
-        initial={false}
-        animate={{ scale: !mounted ? 1.66 : heroReady ? 1 : 1.66 }}
-        transition={{
-          duration: skipIntro && heroReady ? 0 : 1.85,
-          ease: easeOut,
-        }}
+        animate={{ scale }}
+        transition={{ duration: ZOOM_DURATION, ease: easeOut }}
       >
         <Image
           src={images.hero}
@@ -65,14 +100,9 @@ export function Hero() {
           <motion.div
             initial={false}
             animate={
-              mounted && heroReady
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 14 }
+              contentReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }
             }
-            transition={{
-              duration: skipIntro ? 0 : 0.45,
-              ease: easeOut,
-            }}
+            transition={{ duration: 0.45, ease: easeOut }}
             className="mb-6 flex justify-center sm:mb-7"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-yz-accent/35 bg-yz-accent/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em] text-yz-accent backdrop-blur-sm sm:text-xs">
@@ -84,15 +114,9 @@ export function Hero() {
           <motion.h1
             initial={false}
             animate={
-              mounted && heroReady
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 22 }
+              contentReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }
             }
-            transition={{
-              duration: skipIntro ? 0 : 0.55,
-              delay: skipIntro ? 0 : 0.08,
-              ease: easeOut,
-            }}
+            transition={{ duration: 0.55, delay: contentReady ? 0.08 : 0, ease: easeOut }}
             className="yz-display text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] tracking-wide text-white"
           >
             <span className="yz-glow-text block">{t("line1")}</span>
@@ -103,12 +127,8 @@ export function Hero() {
 
           <motion.div
             initial={false}
-            animate={{ scaleX: mounted && heroReady ? 1 : 0 }}
-            transition={{
-              duration: skipIntro ? 0 : 0.6,
-              delay: skipIntro ? 0 : 0.2,
-              ease: easeOut,
-            }}
+            animate={{ scaleX: contentReady ? 1 : 0 }}
+            transition={{ duration: 0.6, delay: contentReady ? 0.2 : 0, ease: easeOut }}
             className="mx-auto mt-6 h-px w-20 bg-gradient-to-r from-transparent via-yz-accent to-transparent sm:mt-8 sm:w-28"
             aria-hidden
           />
@@ -116,15 +136,9 @@ export function Hero() {
           <motion.p
             initial={false}
             animate={
-              mounted && heroReady
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 18 }
+              contentReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }
             }
-            transition={{
-              duration: skipIntro ? 0 : 0.45,
-              delay: skipIntro ? 0 : 0.18,
-              ease: easeOut,
-            }}
+            transition={{ duration: 0.45, delay: contentReady ? 0.18 : 0, ease: easeOut }}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-400 sm:mt-8 sm:text-lg md:text-xl/[1.55]"
           >
             {t("lead")}
@@ -133,15 +147,9 @@ export function Hero() {
           <motion.div
             initial={false}
             animate={
-              mounted && heroReady
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 14 }
+              contentReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }
             }
-            transition={{
-              duration: skipIntro ? 0 : 0.4,
-              delay: skipIntro ? 0 : 0.28,
-              ease: easeOut,
-            }}
+            transition={{ duration: 0.4, delay: contentReady ? 0.28 : 0, ease: easeOut }}
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <a
@@ -165,8 +173,8 @@ export function Hero() {
       <motion.a
         href="#servicii"
         initial={false}
-        animate={{ opacity: mounted && heroReady ? 1 : 0 }}
-        transition={{ delay: skipIntro ? 0 : 0.9, duration: skipIntro ? 0 : 0.5 }}
+        animate={{ opacity: contentReady ? 1 : 0 }}
+        transition={{ delay: contentReady ? 0.9 : 0, duration: 0.5 }}
         className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 text-yz-muted transition-colors hover:text-yz-accent sm:bottom-8"
         aria-label={t("ctaSecondary")}
       >

@@ -25,7 +25,7 @@ export function YzyShopShell({
 }: YzyShopShellProps) {
   return (
     <div className="border-t border-yz-border bg-yz-bg">
-      <section className="relative overflow-hidden py-10 md:py-14 lg:py-16">
+      <section className="relative overflow-hidden py-10 md:py-14 lg:py-16 yz-page-hero">
         <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-25" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(250,204,21,0.1),transparent_55%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ export function YzyShopShell({
               {backLabel}
             </Link>
           </Reveal>
-          <Reveal delay={0.05} className="mt-8">
+          <Reveal delay={0.05} className="mt-10 sm:mt-12">
             <SectionHeading
               eyebrow={eyebrow}
               title={title}

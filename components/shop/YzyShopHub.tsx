@@ -34,7 +34,7 @@ export function YzyShopHub() {
 
   return (
     <div className="border-t border-yz-border bg-yz-bg">
-      <section className="relative min-h-[calc(100dvh-4.5rem)] overflow-hidden py-14 md:py-20 lg:py-24">
+      <section className="yz-page-hero relative min-h-[calc(100dvh-4.5rem)] overflow-hidden pb-14 md:pb-20 lg:pb-24">
         <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-30" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(250,204,21,0.14),transparent_60%)]" />
         <div className="pointer-events-none absolute -left-32 top-1/3 h-64 w-64 rounded-full bg-yz-accent/10 blur-3xl" />
