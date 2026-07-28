@@ -5,28 +5,16 @@ import { ArrowRight, Disc3, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
-import { images } from "@/lib/site";
+import { shopHubCards } from "@/lib/shop-data";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const MotionLink = motion.create(Link);
 
-const hubCards = [
-  {
-    id: "merch" as const,
-    href: "/yzyshop/merch",
-    icon: ShoppingBag,
-    image: images.wheelClose,
-    glow: "rgba(250,204,21,0.35)",
-  },
-  {
-    id: "pneu" as const,
-    href: "/yzyshop/anvelope",
-    icon: Disc3,
-    image: images.tireBay,
-    glow: "rgba(250,204,21,0.28)",
-  },
-];
+const hubIcons = {
+  merch: ShoppingBag,
+  pneu: Disc3,
+} as const;
 
 export function YzyShopHub() {
   const t = useTranslations("shopPage");
@@ -53,8 +41,8 @@ export function YzyShopHub() {
           </Reveal>
 
           <div className="mt-10 flex flex-1 flex-col justify-center gap-5 md:mt-14 md:gap-7 lg:grid lg:grid-cols-2 lg:gap-8">
-            {hubCards.map((card, index) => {
-              const Icon = card.icon;
+            {shopHubCards.map((card, index) => {
+              const Icon = hubIcons[card.id];
               return (
                 <Reveal key={card.id} delay={0.08 + index * 0.1} y={24}>
                   <MotionLink

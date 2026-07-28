@@ -32,9 +32,6 @@ export const socialLinks = [
   { href: "https://www.tiktok.com/@yzywheels", label: "TikTok" },
 ] as const;
 
-export const calcomLink =
-  process.env.NEXT_PUBLIC_CALCOM_LINK ?? "yzywheels/vulcanizare";
-
 export const images = {
   hero: "/photos/heropoza.jpg",
   workshop: "/photos/despre.jpg",

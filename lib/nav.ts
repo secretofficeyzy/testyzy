@@ -4,5 +4,3 @@ export const mainNav = [
   { href: "/despre", key: "about" as const },
   { href: "/contact", key: "contact" as const },
 ];
-
-export const bookingNav = { href: "/programare", key: "booking" as const };

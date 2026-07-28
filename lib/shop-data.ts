@@ -1,3 +1,21 @@
+export const shopImageVersion = 2;
+
+function shopImage(path: string) {
+  return `${path}?v=${shopImageVersion}`;
+}
+
+export const shopImages = {
+  hub: {
+    merch: shopImage("/photos/yzyshop/hub-merch.jpg"),
+    anvelope: shopImage("/photos/yzyshop/hub-anvelope.jpg"),
+  },
+  products: {
+    teeLogoBlack: shopImage("/photos/yzyshop/products/comingsoon.jpg"),
+    teeLogoWhite: shopImage("/photos/yzyshop/products/comingsoon.jpg"),
+    capClassicBlack: shopImage("/photos/yzyshop/products/comingsoon.jpg"),
+  },
+} as const;
+
 export type ShopCategoryId = "tshirts" | "caps";
 
 export type ShopProduct = {
@@ -19,41 +37,35 @@ export const shopProducts: ShopProduct[] = [
     category: "tshirts",
     price: 450,
     sizes: apparelSizes,
-    image: "/photos/shop/tee-logo-black.jpg",
+    image: shopImages.products.teeLogoBlack,
   },
   {
     id: "tee_logo_white",
     category: "tshirts",
     price: 450,
     sizes: apparelSizes,
-    image: "/photos/shop/tee-logo-white.jpg",
-  },
-  {
-    id: "tee_wheel_black",
-    category: "tshirts",
-    price: 480,
-    sizes: apparelSizes,
-    image: "/photos/shop/tee-wheel-black.jpg",
+    image: shopImages.products.teeLogoWhite,
   },
   {
     id: "cap_classic_black",
     category: "caps",
-    price: 320,
+    price: 300,
     sizes: capSizes,
-    image: "/photos/shop/cap-classic-black.jpg",
-  },
-  {
-    id: "cap_classic_yellow",
-    category: "caps",
-    price: 320,
-    sizes: capSizes,
-    image: "/photos/shop/cap-classic-yellow.jpg",
-  },
-  {
-    id: "cap_trucker",
-    category: "caps",
-    price: 350,
-    sizes: capSizes,
-    image: "/photos/shop/cap-trucker.jpg",
+    image: shopImages.products.capClassicBlack,
   },
 ];
+
+export const shopHubCards = [
+  {
+    id: "merch" as const,
+    href: "/yzyshop/merch" as const,
+    image: shopImages.hub.merch,
+    glow: "rgba(250,204,21,0.35)",
+  },
+  {
+    id: "pneu" as const,
+    href: "/yzyshop/anvelope" as const,
+    image: shopImages.hub.anvelope,
+    glow: "rgba(250,204,21,0.28)",
+  },
+] as const;

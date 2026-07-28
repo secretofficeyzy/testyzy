@@ -21,8 +21,7 @@
     "services": "Servicii",
     "prices": "Prețuri",
     "about": "Despre",
-    "contact": "Contact",
-    "booking": "Programare online"
+    "contact": "Contact"
   },
   "meta": {
     "home": {
@@ -48,10 +47,6 @@
     "prices": {
       "title": "Prețuri",
       "description": "Prețuri YZY WHEELS — restaurare și vopsire jante, schimb sezonier de roți. Tarife clare, fără surprize."
-    },
-    "booking": {
-      "title": "Programare online",
-      "description": "Programează-te online la serviciile de vulcanizare YZY WHEELS — sudare, îndreptare jante, reparații anvelope, montaj și balansare."
     },
     "shop": {
       "title": "YZY Shop",
@@ -153,18 +148,6 @@
         },
         "cta": "Vizitează YZY Shop"
       }
-    }
-  },
-  "bookingPage": {
-    "eyebrow": "Rezervă-ți locul",
-    "title": "Programare online",
-    "subtitle": "Programează-te online la serviciile de vulcanizare: sudare, îndreptare jante, reparații complexe anvelope, montare/demontare anvelope și balansare.",
-    "services": {
-      "sudare": "Sudare",
-      "indreptare": "Îndreptare jante",
-      "reparatii": "Reparații anvelope",
-      "montaj": "Montare / demontare",
-      "balansare": "Balansare"
     }
   },
   "pricing": {
@@ -340,8 +323,7 @@
     },
     "ctaTitle": "Vrei să discutăm despre jantele tale?",
     "ctaText": "Trimite câteva poze sau scrie-ne direct. Îți spunem clar ce se poate face.",
-    "ctaPrimary": "Contactează-ne",
-    "ctaSecondary": "Programare online"
+    "ctaPrimary": "Contactează-ne"
   },
   "contactPage": {
     "eyebrow": "Legătură",
@@ -487,21 +469,9 @@
         "name": "Tricou Logo — Alb",
         "description": "Tricou premium cu logo YZY WHEELS, material respirabil."
       },
-      "tee_wheel_black": {
-        "name": "Tricou Wheel Graphic",
-        "description": "Design cu roată stilizată YZY — cultura auto în fiecare detaliu."
-      },
       "cap_classic_black": {
         "name": "Șapcă Classic — Negru",
         "description": "Șapcă clasică cu logo brodat, reglabilă."
-      },
-      "cap_classic_yellow": {
-        "name": "Șapcă Classic — Galben",
-        "description": "Șapcă în culoarea brandului YZY, logo brodat."
-      },
-      "cap_trucker": {
-        "name": "Șapcă Trucker",
-        "description": "Model trucker cu plasă respirabilă și logo YZY WHEELS."
       }
     }
   }
