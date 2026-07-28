@@ -5,6 +5,8 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import type { LocalePageParams } from "@/lib/i18n/page-params";
+import { routing } from "@/lib/i18n/routing";
+import { siteName, siteUrl } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -14,9 +16,30 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "meta" });
+  const title = t("home.title");
+  const description = t("home.description");
+  const path = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const pageUrl = `${siteUrl}${path || "/"}`;
+
   return {
-    title: t("home.title"),
-    description: t("home.description"),
+    title: { absolute: title },
+    description,
+    alternates: {
+      canonical: pageUrl,
+      languages: {
+        ro: siteUrl,
+        ru: `${siteUrl}/ru`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      siteName,
+      locale: locale === "ru" ? "ru_RU" : "ro_RO",
+      type: "website",
+      images: [{ url: "/og.svg", width: 1200, height: 630, alt: siteName }],
+    },
   };
 }
 

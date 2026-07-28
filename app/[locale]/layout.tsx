@@ -24,8 +24,8 @@ export async function generateMetadata({
   const base = locale === "ru" ? "ru_RU" : "ro_RO";
   const title =
     locale === "ru"
-      ? `${siteName} — покраска и восстановление дисков, шиномонтаж`
-      : `${siteName} — vopsire jante, restaurare, vulcanizare`;
+      ? `${siteName} — Покраска и восстановление дисков в Кишинёве`
+      : `${siteName} — Restaurare și vopsire jante în Chișinău`;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -35,8 +35,8 @@ export async function generateMetadata({
     },
     description:
       locale === "ru"
-        ? "YZY WHEELS Кишинёв — покраска и восстановление дисков, алмазная проточка, суппорты, шиномонтаж и онлайн-запись."
-        : "YZY WHEELS Chișinău — vopsire și restaurare jante, diamond cut, etriere, vulcanizare și programare online.",
+        ? "Профессиональная покраска и восстановление дисков, алмазная проточка, покраска суппортов и шиномонтаж в Кишинёве."
+        : "Restaurare profesională de jante, vopsire jante și etriere, diamond cut și vulcanizare în Chișinău. Atelier premium pentru jante și anvelope.",
     authors: [{ name: siteName }],
     openGraph: {
       type: "website",
@@ -44,6 +44,10 @@ export async function generateMetadata({
       url: siteUrl,
       siteName,
       title,
+      description:
+        locale === "ru"
+          ? "Профессиональная покраска и восстановление дисков, алмазная проточка, покраска суппортов и шиномонтаж в Кишинёве."
+          : "Restaurare profesională de jante, vopsire jante și etriere, diamond cut și vulcanizare în Chișinău. Atelier premium pentru jante și anvelope.",
       images: [{ url: "/og.svg", width: 1200, height: 630, alt: siteName }],
     },
     robots: { index: true, follow: true },

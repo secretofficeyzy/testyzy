@@ -1,7 +1,7 @@
 export const siteName = "YZY WHEELS";
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://yzywheels.md";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yzywheels.md";
 
 export const business = {
   name: siteName,
@@ -17,6 +17,15 @@ export function phoneHref(phone: string) {
   const digits = phone.replace(/\s/g, "");
   return digits.startsWith("0") ? `tel:+373${digits.slice(1)}` : `tel:${digits}`;
 }
+
+export function phoneIntlDigits(phone: string) {
+  const digits = phone.replace(/\s/g, "");
+  return digits.startsWith("0") ? `373${digits.slice(1)}` : digits.replace(/^\+/, "");
+}
+
+export const messengerPhone = business.phones[0];
+
+export const whatsAppHref = `https://wa.me/${phoneIntlDigits(messengerPhone)}`;
 
 export const socialLinks = [
   { href: "https://www.instagram.com/yzywheels/", label: "Instagram" },

@@ -1,13 +1,13 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { CalendarCheck, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { Logo } from "@/components/layout/Logo";
 import { Link, usePathname } from "@/lib/i18n/navigation";
-import { bookingNav, mainNav } from "@/lib/nav";
+import { mainNav } from "@/lib/nav";
 
 function NavLink({
   href,
@@ -103,19 +103,8 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-2.5 lg:flex">
+          <div className="hidden lg:flex">
             <LocaleSwitcher />
-            <Link
-              href={bookingNav.href}
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-yz-accent px-4 py-2 text-sm font-semibold text-zinc-950 shadow-[0_0_24px_-4px_rgba(250,204,21,0.65)] transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-400 hover:shadow-[0_0_32px_-2px_rgba(250,204,21,0.75)] active:scale-[0.98]"
-            >
-              <span
-                aria-hidden
-                className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full"
-              />
-              <CalendarCheck className="relative h-4 w-4" aria-hidden />
-              <span className="relative">{tNav(bookingNav.key)}</span>
-            </Link>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -170,21 +159,6 @@ export function SiteHeader() {
                     </motion.div>
                   );
                 })}
-                <motion.div
-                  initial={reduce ? false : { opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: mainNav.length * 0.04 + 0.04, duration: 0.22 }}
-                  className="mt-1 px-1 pb-1"
-                >
-                  <Link
-                    href={bookingNav.href}
-                    onClick={() => setOpen(false)}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-yz-accent px-4 py-3 text-base font-semibold text-zinc-950 transition duration-300 hover:bg-yellow-400 active:scale-[0.98]"
-                  >
-                    <CalendarCheck className="h-5 w-5" aria-hidden />
-                    {tNav(bookingNav.key)}
-                  </Link>
-                </motion.div>
               </nav>
             </motion.div>
           ) : null}

@@ -42,7 +42,7 @@ export default async function DesprePage({
 
   return (
     <div className="border-t border-yz-border bg-yz-bg">
-      <section className="relative overflow-hidden py-16 md:py-20 lg:py-28">
+      <section className="yz-page-hero relative overflow-hidden pb-16 md:pb-20 lg:pb-28">
         <div className="yz-grid-bg pointer-events-none absolute inset-0 opacity-30" />
         <div className="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-yellow-500/10 blur-3xl" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_10%,rgba(250,204,21,0.08),transparent_55%)]" />
@@ -194,19 +194,8 @@ export default async function DesprePage({
           <p className="mx-auto mt-5 max-w-xl text-base text-yz-muted sm:text-lg">
             {t("ctaText")}
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <ButtonLink
-              href="/programare"
-              variant="primary"
-              className="w-full sm:w-auto"
-            >
-              {t("ctaSecondary")}
-            </ButtonLink>
-            <ButtonLink
-              href="/contact"
-              variant="secondary"
-              className="w-full sm:w-auto"
-            >
+          <div className="mt-10 flex justify-center">
+            <ButtonLink href="/contact" variant="primary" className="w-full sm:w-auto">
               {t("ctaPrimary")}
             </ButtonLink>
           </div>

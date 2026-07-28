@@ -26,8 +26,8 @@
   },
   "meta": {
     "home": {
-      "title": "Acasă",
-      "description": "YZY WHEELS Chișinău — vopsire și restaurare jante, diamond cut, etriere, vulcanizare și programare online. Atelier premium pentru jante și anvelope."
+      "title": "YZY WHEELS — Restaurare și vopsire jante în Chișinău",
+      "description": "Restaurare profesională de jante, vopsire jante și etriere, diamond cut și vulcanizare în Chișinău. Atelier premium pentru jante și anvelope."
     },
     "services": {
       "title": "Servicii",
@@ -339,7 +339,7 @@
       }
     },
     "ctaTitle": "Vrei să discutăm despre jantele tale?",
-    "ctaText": "Trimite câteva poze sau programează-te direct. Îți spunem clar ce se poate face.",
+    "ctaText": "Trimite câteva poze sau scrie-ne direct. Îți spunem clar ce se poate face.",
     "ctaPrimary": "Contactează-ne",
     "ctaSecondary": "Programare online"
   },
@@ -349,7 +349,8 @@
     "subtitle": "Sună-ne sau trimite câteva poze cu jantele. Vedem despre ce este vorba și îți răspundem cât mai direct posibil.",
     "company": "Date contact",
     "formTitle": "Trimite un mesaj",
-    "formHint": "Validare automată — nu trimite date de plată în formular.",
+    "messengerHint": "Pentru mai ușor, ne poți scrie direct pe WhatsApp și îți răspundem mai rapid.",
+    "whatsapp": "Scrie pe WhatsApp",
     "mapTitle": "Locație pe hartă"
   },
   "quotePage": {
