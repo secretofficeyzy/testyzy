@@ -32,19 +32,35 @@ export const socialLinks = [
   { href: "https://www.tiktok.com/@yzywheels", label: "TikTok" },
 ] as const;
 
+/**
+ * Crește când înlocuiești poze locale (hero, despre, servicii, galerie) —
+ * altfel Next.js poate afișa versiunea veche din cache.
+ */
+export const sitePhotoVersion = 2;
+
+function sitePhoto(path: string) {
+  return `${path}?v=${sitePhotoVersion}`;
+}
+
 export const images = {
-  hero: "/photos/heropoza.jpg",
-  workshop: "/photos/despre.jpg",
-  wheelClose: "/photos/accesorii.jpg",
-  repair: "/photos/recond.jpg",
-  tireBay: "/photos/vulc.jpg",
+  hero: sitePhoto("/photos/heropoza.jpg"),
+  workshop: sitePhoto("/photos/despre.jpg"),
+  wheelClose: sitePhoto("/photos/accesorii.jpg"),
+  repair: sitePhoto("/photos/recond.jpg"),
+  tireBay: sitePhoto("/photos/vulcanizare-poza.jpg"),
 } as const;
 
 export const galleryImages = [
-  "/photos/galerie1.jpg",
-  "/photos/galerie2.jpg",
-  "/photos/galerie3.jpg",
-  "/photos/galerie4.jpg",
-  "/photos/galerie5.jpg",
-  "/photos/galerie6.jpg",
+  sitePhoto("/photos/recond.jpg"),
+  sitePhoto("/photos/galerie2.jpg"),
+  sitePhoto("/photos/galerie3.jpg"),
+  sitePhoto("/photos/galerie4.jpg"),
+  sitePhoto("/photos/galerie5.jpg"),
+  sitePhoto("/photos/galerie6.jpg"),
+  sitePhoto("/photos/galerie7.jpg"),
+  sitePhoto("/photos/galerie8.jpg"),
+  sitePhoto("/photos/galerie9.jpg"),
+  sitePhoto("/photos/galerie10.jpg"),
+  sitePhoto("/photos/galerie11.jpg"),
+  sitePhoto("/photos/galerie12.jpg"),
 ] as const;
