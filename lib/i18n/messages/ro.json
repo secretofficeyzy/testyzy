@@ -97,16 +97,6 @@
             "title": "DIAMOND CUT",
             "description": "Refacem finisajul diamantat prin prelucrare de înaltă precizie, urmată de aplicarea unui strat protector de lac. Rezultatul este un aspect elegant, precis și o protecție de lungă durată."
           },
-          "etriere": {
-            "title": "Vopsire etriere",
-            "description": "Oferim etrierelor un aspect modern și o protecție suplimentară prin utilizarea vopselelor speciale, rezistente la temperaturi ridicate și la utilizarea zilnică. Un detaliu care completează perfect aspectul mașinii."
-          }
-        }
-      },
-      "vulcanizare": {
-        "title": "Servicii de vulcanizare",
-        "short": "Oferim servicii complete de vulcanizare, de la reparații și îndreptarea jantelor până la montaj, echilibrare și întreținerea anvelopelor, cu atenție la calitate și siguranță.",
-        "services": {
           "sudare": {
             "title": "Sudare jante",
             "description": "Reparăm fisurile și crăpăturile jantelor prin sudură profesională, acolo unde reparația poate fi efectuată în condiții de siguranță."
@@ -115,6 +105,16 @@
             "title": "Îndreptare jante",
             "description": "Corectăm deformările jantelor cu echipamente specializate, pentru a reda forma și funcționarea corectă a acestora."
           },
+          "etriere": {
+            "title": "Vopsire etriere",
+            "description": "Oferim etrierelor un aspect modern și o protecție suplimentară prin utilizarea vopselelor speciale, rezistente la temperaturi ridicate și la utilizarea zilnică. Un detaliu care completează perfect aspectul mașinii."
+          }
+        }
+      },
+      "vulcanizare": {
+        "title": "Servicii de vulcanizare",
+        "short": "Oferim servicii complete de vulcanizare, de la reparații anvelope până la montaj, echilibrare și întreținerea anvelopelor, cu atenție la calitate și siguranță.",
+        "services": {
           "reparatii": {
             "title": "Reparații complexe anvelope",
             "description": "Identificăm și remediem defectele anvelopelor folosind materiale și proceduri profesionale, cu accent pe siguranță și fiabilitate."

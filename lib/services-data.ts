@@ -17,13 +17,13 @@ export const atelierCategories: AtelierCategory[] = [
     id: "recondicionare",
     icon: Gem,
     image: images.repair,
-    services: ["vopsire", "restaurare", "diamond_cut", "etriere"],
+    services: ["vopsire", "restaurare", "diamond_cut", "sudare", "indreptare", "etriere"],
   },
   {
     id: "vulcanizare",
     icon: Disc3,
     image: images.tireBay,
-    services: ["sudare", "indreptare", "reparatii", "montaj", "balansare"],
+    services: ["reparatii", "montaj", "balansare"],
   },
   {
     id: "shop",

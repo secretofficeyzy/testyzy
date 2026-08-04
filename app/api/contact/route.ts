@@ -43,7 +43,7 @@ export async function POST(req: Request) {
       subject: "Mesaj nou din formularul de contact",
       replyTo: email,
       text: [
-        "Ai primit un mesaj nou:",
+        "Ai primit un mesaj nou de la client:",
         `Nume: ${name}`,
         `Email: ${email}`,
         `Număr telefon: ${phone}`,
